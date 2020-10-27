@@ -1,0 +1,12 @@
+package com.eventuror.brainspew.dao;
+
+import java.util.List;
+
+import com.eventuror.brainspew.entities.Thought;
+
+public interface ThoughtRepository {
+	
+	@Override
+	public List<Thought> findAll();
+
+}

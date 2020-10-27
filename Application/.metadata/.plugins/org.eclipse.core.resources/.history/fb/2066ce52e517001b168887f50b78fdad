@@ -1,0 +1,7 @@
+package com.eventuror.brainspew.entities;
+
+public class Thought {
+	
+	private long thoughtBubbleId
+
+}

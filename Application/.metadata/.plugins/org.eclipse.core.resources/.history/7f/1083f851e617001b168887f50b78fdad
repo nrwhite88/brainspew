@@ -1,0 +1,8 @@
+package com.eventuror.brainspew.dao;
+
+public interface ThoughtRepository {
+	
+	@Override
+	public List<Thought> findAll();
+
+}

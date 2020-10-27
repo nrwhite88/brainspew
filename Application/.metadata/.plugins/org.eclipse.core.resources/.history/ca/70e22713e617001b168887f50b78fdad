@@ -1,0 +1,9 @@
+package com.eventuror.brainspew.entities;
+
+public class Thought {
+	
+	private int thoughtId;
+	private String thought;
+
+}
+

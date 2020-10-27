@@ -1,0 +1,14 @@
+package com.eventuror.brainspew.dao;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.eventuror.brainspew.entities.Thought;
+ 
+public class ThoughtRepository extends CrudRepository<Employee, Long>{
+	
+	@Override
+	public List<Thought> findAll();
+
+}
