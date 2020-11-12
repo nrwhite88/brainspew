@@ -9,6 +9,6 @@ import com.eventuror.brainspew.entities.Thought;
 public interface ThoughtRepository extends CrudRepository<Thought, Long> {
 	
 	@Override
-	public List<Thought> findAll();
+	List<Thought> findAll();
 
 }

@@ -1,0 +1,32 @@
+package com.eventuror.brainspew;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.eventuror.brainspew.dao.ThoughtRepository;
+
+@SpringBootApplication
+public class BrainspewApplication {
+	
+	@Autowired
+	ThoughtRepository thoughtRepo;
+
+	public static void main(String[] args) {
+		SpringApplication.run(BrainspewApplication.class, args);
+	}
+	
+	@Bean
+	CommandLineRunner runner() {
+		
+		return args -> {
+			
+			Thought thought1 = new Thought("George dies");
+
+			thoughtRepo.save(empthought11);
+			
+		};
+		
+	}
+
+}

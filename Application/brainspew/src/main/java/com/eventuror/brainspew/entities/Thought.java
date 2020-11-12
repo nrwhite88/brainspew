@@ -1,27 +1,80 @@
 package com.eventuror.brainspew.entities;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Thought {
 	
 	@Id
-	private int thoughtId;
-	private String thought;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private long thoughtId;
+	private String description;
 	
-	public int getThoughtId() {
+	@OneToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST},
+			fetch = FetchType.LAZY)
+	@JoinTable(name="thought_child",
+			joinColumns=@JoinColumn(name="thought_id"),
+			inverseJoinColumns=@JoinColumn(name="parent_id")
+			)
+	private List<Thought> children;
+	
+	@ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST},
+			fetch = FetchType.LAZY)
+	@JoinTable(name="thought_child",
+			joinColumns=@JoinColumn(name="parent_id"),
+			inverseJoinColumns=@JoinColumn(name="thought_id")
+			)
+	private Thought parent;
+	
+	public Thought() {
+	}
+	
+	public Thought(String description) {
+		super();
+		this.description = description;
+	}
+
+	public Thought(long thoughtId, String description) {
+		super();
+		this.thoughtId = thoughtId;
+		this.description = description;
+	}
+
+	public long getThoughtId() {
 		return thoughtId;
 	}
-	public void setThoughtId(int thoughtId) {
+
+	public void setThoughtId(long thoughtId) {
 		this.thoughtId = thoughtId;
 	}
-	public String getThought() {
-		return thought;
+
+	public String getDescription() {
+		return description;
 	}
-	public void setThought(String thought) {
-		this.thought = thought;
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
+
+	public List<Thought> getChildren() {
+		return children;
+	}
+
+	public void setChildren(List<Thought> children) {
+		this.children = children;
+	}
+
+
 
 }
-

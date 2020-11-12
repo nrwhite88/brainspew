@@ -1,0 +1,9 @@
+package com.eventuror.brainspew.dto;
+
+public interface ThoughtChild {
+		
+		public long getThoughtId();
+		public long getChildId();
+		public String getDescription();
+
+}

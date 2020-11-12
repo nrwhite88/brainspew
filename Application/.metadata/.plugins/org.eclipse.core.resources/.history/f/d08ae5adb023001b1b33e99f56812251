@@ -1,0 +1,5 @@
+package com.eventuror.brainspew.dto;
+
+public interface ThoughtChild {
+
+}

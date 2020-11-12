@@ -1,0 +1,42 @@
+package com.eventuror.brainspew.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Thought {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int thoughtId;
+	private String description;
+	
+	public Thought() {
+	}
+	
+	public Thought(String description) {
+		this.description = description;
+	}
+
+	public Thought(int thoughtId, String description) {
+		super();
+		this.thoughtId = thoughtId;
+		this.description = description;
+	}
+
+	public int getThoughtId() {
+		return thoughtId;
+	}
+	public void setThoughtId(int thoughtId) {
+		this.thoughtId = thoughtId;
+	}
+	public String getThought() {
+		return description;
+	}
+	public void setThought(String description) {
+		this.description = description;
+	}
+
+}

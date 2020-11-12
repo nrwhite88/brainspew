@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+	
+	<div class="container">
+		<form action="/thoughts/save" th:object="${thought}" method="POST">
+		
+		<input type="text" placeholder="Description" th:field=${thought.description}>
+		
+		<button type="submit">Create Thought</button>
+		
+		</form>
+	</div>
+	
+</body>
+
+</html>

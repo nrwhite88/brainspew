@@ -1,5 +1,0 @@
-package com.eventuror.brainspew.dao;
-
-public interface ThoughtRepository {
-
-}

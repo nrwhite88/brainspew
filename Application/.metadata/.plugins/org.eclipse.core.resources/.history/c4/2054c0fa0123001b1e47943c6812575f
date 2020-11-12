@@ -1,0 +1,10 @@
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:mysql://192.168.0.18:3306/brainspew
+spring.datasource.username=nick
+spring.datasource.password=RueTheDay93!
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+#spring.h2.console.enabled=true
+#spring.h2.console.path=/h2-console
+#spring.jpa.show-sql=true
+#spring.thymeleaf.cache=false
+#spring.datasource.initialization-mode=never
