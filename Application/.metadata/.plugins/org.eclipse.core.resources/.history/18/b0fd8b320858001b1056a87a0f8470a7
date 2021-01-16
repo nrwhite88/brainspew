@@ -24,7 +24,7 @@ public class Thought {
 	
 	@OneToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST},
 			fetch = FetchType.LAZY)
-//	@OrderColumn
+	@OrderColumn
 	@JoinTable(name="thought_parent",
 			joinColumns=@JoinColumn(name="parent_id"),
 			inverseJoinColumns=@JoinColumn(name="thought_id")

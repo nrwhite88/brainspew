@@ -1,5 +1,0 @@
-spring.jpa.hibernate.ddl-auto=none
-spring.datasource.url=jdbc:mysql://192.168.0.18:3306/brainspew
-spring.datasource.username=nickaloo	
-spring.datasource.password=RueTheDay93!
-spring.datasource.driver-class-name=com.mysql.jdbc.Driver

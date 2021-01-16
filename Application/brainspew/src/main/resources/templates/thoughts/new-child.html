@@ -6,7 +6,7 @@
 
 		<form action="/thoughts/save-child" th:object="${thought}" method="POST">
 		
-		<select th:field="*{children}">
+		<select th:field="*{parent}">
 			<option th:each = "th : ${thoughtList}"
 					th:value = "${th.thoughtId}"
 					th:text = "${th.description}">
