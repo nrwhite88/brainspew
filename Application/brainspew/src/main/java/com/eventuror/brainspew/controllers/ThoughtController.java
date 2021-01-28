@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.eventuror.brainspew.dao.ThoughtRepository;
 import com.eventuror.brainspew.entities.Thought;
+import com.eventuror.brainspew.relationships.ThoughtParentId;
 
 @Controller
 @RequestMapping("/thoughts")
@@ -53,11 +54,14 @@ public class ThoughtController {
 	public String newChild(Model model) {
 		
 		Thought thought = new Thought();
+		ThoughtParentId thoughtParentId = new ThoughtParentId();
 		
 		List<Thought> thoughts = thoughtRepo.findAll();
+		List<ThoughtParentId> parents = thoughtRepo.thoughtParents();
 		
 		model.addAttribute("thought", thought);
-		model.addAttribute("thoughtList", thoughts);
+		model.addAttribute("allThoughts", thoughts);
+		model.addAttribute("parents", parents);
 		
 		return "thoughts/new-child";
 		

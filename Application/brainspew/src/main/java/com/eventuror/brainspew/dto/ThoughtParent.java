@@ -6,6 +6,6 @@ public interface ThoughtParent {
 		
 		public long getThoughtId();
 		public long getParentId();
-		public long getChildrenOrder();
+		public long getOrderId();
 
 }

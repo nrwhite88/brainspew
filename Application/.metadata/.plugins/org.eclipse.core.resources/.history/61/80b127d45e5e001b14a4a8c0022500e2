@@ -1,0 +1,45 @@
+package com.eventuror.brainspew.relationships;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+
+@Embeddable
+public class ThoughtParentId
+    implements Serializable {
+ 
+    @Column(name = "thought_id")
+    private long thoughtId;
+ 
+    @Column(name = "parent_id")
+    private long parentId;
+ 
+    private ThoughtParentId() {}
+ 
+    public ThoughtParentId(
+        long thoughtId,
+        long parentId) {
+        this.thoughtId = thoughtId;
+        this.parentId = parentId;
+    }
+    
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+ 
+        if (o == null || getClass() != o.getClass())
+            return false;
+ 
+        PostTag that = (PostTag) o;
+        return Objects.equals(post, that.post) &&
+               Objects.equals(tag, that.tag);
+    }
+ 
+    @Override
+    public int hashCode() {
+        return Objects.hash(post, tag);
+    }
+    
+    
+}

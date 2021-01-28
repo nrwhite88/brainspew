@@ -1,0 +1,17 @@
+package com.eventuror.brainspew.relationships;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+
+@Embeddable
+public class thought_parent implements Serializable {
+	
+	@Column(name = "thought_id")
+	private long thoughtId;
+	
+	@Column(name = "tag_id")
+	private long 
+
+}

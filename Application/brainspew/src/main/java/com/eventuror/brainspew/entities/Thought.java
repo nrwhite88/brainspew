@@ -1,6 +1,7 @@
 package com.eventuror.brainspew.entities;
 
 import java.util.List;
+import java.util.Objects;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -12,32 +13,24 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
+
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.annotations.NaturalId;
+import org.hibernate.annotations.NaturalIdCache;
 
 @Entity
+@NaturalIdCache
+@Cache(
+	    usage = CacheConcurrencyStrategy.READ_WRITE
+	)
 public class Thought {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long thoughtId;
+	@NaturalId
 	private String description;
-	
-	@OneToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST},
-			fetch = FetchType.LAZY)
-//	@OrderColumn
-	@JoinTable(name="thought_parent",
-			joinColumns=@JoinColumn(name="parent_id"),
-			inverseJoinColumns=@JoinColumn(name="thought_id")
-			)
-	private List<Thought> children;
-	
-	@ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST},
-			fetch = FetchType.LAZY)
-	@JoinTable(name="thought_parent",
-			joinColumns=@JoinColumn(name="thought_id"),
-			inverseJoinColumns=@JoinColumn(name="parent_id")
-			)
-	private Thought parent;
 	
 	public Thought() {
 	}
@@ -53,7 +46,7 @@ public class Thought {
 		this.description = description;
 	}
 
-	public long getThoughtId() {
+    public long getThoughtId() {
 		return thoughtId;
 	}
 
@@ -69,22 +62,17 @@ public class Thought {
 		this.description = description;
 	}
 
-	public List<Thought> getChildren() {
-		return children;
-	}
-
-	public void setChildren(List<Thought> children) {
-		this.children = children;
-	}
-
-	public Thought getParent() {
-		return parent;
-	}
-
-	public void setParent(Thought parent) {
-		this.parent = parent;
-	}
-
-
+	@Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Thought thought = (Thought) o;
+        return Objects.equals(description, thought.description);
+    }
+ 
+    @Override
+    public int hashCode() {
+        return Objects.hash(description);
+    }
 
 }

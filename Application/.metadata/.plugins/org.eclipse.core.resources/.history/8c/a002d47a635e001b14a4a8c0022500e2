@@ -1,0 +1,60 @@
+package com.eventuror.brainspew.entities;
+
+import java.util.List;
+import java.util.Objects;
+
+import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
+import javax.persistence.MapsId;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import com.eventuror.brainspew.relationships.ThoughtParentId;
+
+@Entity(name = "ThoughtParent")
+@Table(name = "thought_parent")
+public class ThoughtParent {
+ 
+    @EmbeddedId
+    private ThoughtParentId id;
+ 
+    @OneToMany(fetch = FetchType.LAZY)
+    @MapsId("thoughtId")
+    private List<Thought> children;
+ 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @MapsId("parentId")
+    private Thought parent;
+ 
+    @Column(name = "order_id")
+    private long orderId;
+ 
+    private ThoughtParent() {}
+ 
+    public ThoughtParent(Thought thought, Thought parent) {
+        this.parent = parent;
+        this.id = new ThoughtParentId(thought.getThoughtId(), parent.getThoughtId());
+    }
+ 
+    //Getters and setters omitted for brevity
+ 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+ 
+        if (o == null || getClass() != o.getClass())
+            return false;
+ 
+        ThoughtParent that = (ThoughtParent) o;
+        return Objects.equals(children, that.children) &&
+               Objects.equals(parent, that.parent);
+    }
+ 
+    @Override
+    public int hashCode() {
+        return Objects.hash(children, parent);
+    }
+}
