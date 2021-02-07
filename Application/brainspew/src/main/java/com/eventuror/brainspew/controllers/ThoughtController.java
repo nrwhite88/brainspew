@@ -1,17 +1,20 @@
 package com.eventuror.brainspew.controllers;
 
 import java.util.List;
+import java.util.function.Function;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.eventuror.brainspew.dao.ThoughtRepository;
+import com.eventuror.brainspew.dto.ThoughtDTO;
 import com.eventuror.brainspew.entities.Thought;
-import com.eventuror.brainspew.relationships.ThoughtParentId;
 
 @Controller
 @RequestMapping("/thoughts")
@@ -22,6 +25,16 @@ public class ThoughtController {
 	
 	@GetMapping("/list")
 	public String displayThought(Model model) {
+		
+		List<Thought> thoughts = thoughtRepo.findAll();
+		model.addAttribute("thoughtList", thoughts);
+		
+		return "thoughts/list-thoughts";
+		
+	}
+	
+	@GetMapping("/list2")
+	public String thoughtTree(Model model) {
 		
 		List<Thought> thoughts = thoughtRepo.findAll();
 		model.addAttribute("thoughtList", thoughts);
@@ -54,14 +67,11 @@ public class ThoughtController {
 	public String newChild(Model model) {
 		
 		Thought thought = new Thought();
-		ThoughtParentId thoughtParentId = new ThoughtParentId();
 		
 		List<Thought> thoughts = thoughtRepo.findAll();
-		List<ThoughtParentId> parents = thoughtRepo.thoughtParents();
 		
 		model.addAttribute("thought", thought);
-		model.addAttribute("allThoughts", thoughts);
-		model.addAttribute("parents", parents);
+		model.addAttribute("thoughts", thoughts);
 		
 		return "thoughts/new-child";
 		

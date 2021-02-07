@@ -1,0 +1,16 @@
+package com.eventuror.brainspew.dto;
+
+import java.util.Set;
+
+import com.eventuror.brainspew.entities.Thought;
+
+import lombok.Builder;
+
+@Builder
+public class ThoughtParent {
+
+    private long id;
+    private String description;
+    private Thought parent;
+    private Set<Thought> children;
+}

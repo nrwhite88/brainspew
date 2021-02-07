@@ -1,0 +1,16 @@
+package com.eventuror.brainspew.dto;
+
+import java.util.Set;
+
+import com.eventuror.brainspew.entities.Thought;
+
+/**
+ * @author MalkeithSingh on 11-09-2019
+ */
+public class ThoughtParent {
+
+    private long id;
+    private String description;
+    private Thought thought;
+    private Set<Thought> thought;
+}

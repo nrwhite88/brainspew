@@ -5,7 +5,625 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2021-01-27T23:00:00Z</updated>
+  <updated>2021-02-05T04:24:00Z</updated>
+  <entry>
+    <title>A Bootiful Podcast:  RSocket legend and new Reactor team member Oleh Dokuka</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/02/04/a-bootiful-podcast-rsocket-legend-and-new-reactor-team-member-oleh-dokuka" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2021-02-05:4355</id>
+    <updated>2021-02-05T04:24:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;A Bootiful Podcast&lt;/em&gt;! In this episode, &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to RSocket legend and new Reactor team member &lt;a href="https://twitter.com/OlehDokuka"&gt;Oleh Dokuka (@OlehDokuka)&lt;/a&gt; about RSocket routing, the RSocket broker, Netty, HTTP3 and Quick, the &lt;code&gt;RSocketClient&lt;/code&gt;, and so much more. &lt;/p&gt;
+&lt;iframe title="RSocket legend and new Reactor team member Oleh Dokuka " height="122" width="100%" style="border: none;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/media/player/m4ht5-f9c3eb?from=pb6admin&amp;download=1&amp;version=1&amp;auto=0&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Helvetica&amp;skin=1&amp;pfauth=&amp;btn-skin=107"&gt;&lt;/iframe&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Demystifying Spring Cloud Stream producers with Apache Kafka partitions</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/02/03/demystifying-spring-cloud-stream-producers-with-apache-kafka-partitions" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Soby Chacko</name>
+    </author>
+    <id>tag:spring.io,2021-02-03:4352</id>
+    <updated>2021-02-03T20:24:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;In this blog, we are taking a deeper look at writing a Spring Cloud Stream producer with Apache Kafka and how it handles native partitions in Kafka.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Spring Cloud Stream has a middleware agnostic concept of partitions. Whenever possible, Spring Cloud Stream leverages the native partitioning capabilities of the middleware if it has such capabilities as in the case of Apache Kafka. This blog looks at how a Spring Cloud Stream developer handles partitions when writing a producer application that publishes data to Kafka. In a subsequent article, we will look at how consumers handle partitions in a Kafka based Spring Cloud Stream application.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Partitions are the basic unit of scaling and parallelism in Apache Kafka. Using the right partitioning strategies allows your application to handle terabytes of data at scale with minimal latency. A Kafka producer can write to different partitions in parallel, which generally means that 	it can achieve higher levels of throughput. While partitioning has these obvious upsides, there are other various considerations one needs to carefully make. Within a partition itself, throughput may be further limited by factors such as batching size, compression algorithms used, type of acknowledgments, replication factor, etc. Further, having more partitions means more open file handles (because partitions map to a directory on the broker and each log segment within a partition needs an index file and a data file). There are plenty of resources available on the web on how to come up with the right number of partitions for a Kafka application, which you may want to get familiar with before deploying your Kafka based enterprise producer application.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect2"&gt;
+&lt;h3 id="spring-cloud-stream-provisioner-for-kafka-binder"&gt;&lt;a class="anchor" href="#spring-cloud-stream-provisioner-for-kafka-binder"&gt;&lt;/a&gt;Spring Cloud Stream Provisioner for Kafka binder&lt;/h3&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Spring Cloud Stream Kafka binder has a topic provisioner that handles the various application-level topic requirements. Among other things, creating and modifying the number of partitions is something that the provisioner is capable of doing. The Provisioner itself is not doing these operations but calls the right admin APIs from the Kafka cluster.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;There are two scenarios that deal with topic creation that could come up with when writing a Spring Cloud Stream Kafka application in general. Most enterprises lock down access to the Kafka cluster and only an admin can make such operational changes as creating a topic, adding partitions, etc. In this scenario, the applications cannot directly create or modify topics. The other scenario is that the enterprise is pretty relaxed when it comes to giving access to the Kafka cluster in that the applications are free to create or modify the topics. Let’s consider a few of these things further.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect3"&gt;
+&lt;h4 id="scenario-1-application-has-full-admin-privileges-on-the-kafka-cluster"&gt;&lt;a class="anchor" href="#scenario-1-application-has-full-admin-privileges-on-the-kafka-cluster"&gt;&lt;/a&gt;Scenario 1: Application has full admin privileges on the Kafka Cluster&lt;/h4&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;In this scenario, the application has full admin access to the Kafka cluster. You are writing a Spring Cloud Stream producer that publishes messages to a Kafka topic. For the sake of our discussion, let’s assume that this topic is non-existent and your application will create it. You also want to make sure that the topic is provisioned with a certain number of partitions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;There are a couple of ways to tell Spring Cloud Stream, how many partitions you want the topic to be provisioned with. Each one has pros and cons. Let’s look at them.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Use a binder wide property to specify the partition count. Using this, any topic that you create will have the same partition count. If your application is creating multiple topics and they all want the same number of partitions, this is an ideal way to create partitions. The disadvantage of this approach is that this is non-configurable per-binding unless overridden. The property you use at the binder level is the following.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;code&gt;spring.cloud.stream.kafka.binder.min-partition-count&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Another option is to have the partition count specified at the binding level. Using this approach, you can have multiple topics in the same application configured with different partition counts. The following is the property&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;code&gt;spring.cloud.stream.bindings.&amp;lt;binding-name&amp;gt;.producer.partition-count&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Given that the previous global property enforces a minimum (it could be larger), the larger of the two will take effect for a specific binding.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;If neither of the above options is used, then the topic will be created with the number of partitions based on the broker &lt;code&gt;num.partitions&lt;/code&gt; property (default: 1).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect3"&gt;
+&lt;h4 id="scenario-2-kafka-cluster-is-locked-down-and-the-application-is-not-allowed-to-perform-any-admin-operations"&gt;&lt;a class="anchor" href="#scenario-2-kafka-cluster-is-locked-down-and-the-application-is-not-allowed-to-perform-any-admin-operations"&gt;&lt;/a&gt;Scenario 2: Kafka Cluster is locked down and the application is not allowed to perform any admin operations.&lt;/h4&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;In this scenario, your options as an application developer are very limited. Since the Kafka cluster is locked down, the application will not be able to create or change existing topics. If the topic is not created beforehand, your application will throw an exception during startup and fail. In order to avoid this, you have to make sure that the topic is created with the right number of partitions and disable automatic topic provisioning using the binder property (spring.cloud.stream.kafka.binder.auto-create-topics set to false).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect3"&gt;
+&lt;h4 id="scenario-3-application-has-full-admin-privileges-on-the-kafka-cluster-and-the-topic-already-exists-but-you-want-to-increase-the-partitions-next-time-the-application-starts"&gt;&lt;a class="anchor" href="#scenario-3-application-has-full-admin-privileges-on-the-kafka-cluster-and-the-topic-already-exists-but-you-want-to-increase-the-partitions-next-time-the-application-starts"&gt;&lt;/a&gt;Scenario 3: Application has full admin privileges on the Kafka Cluster and the topic already exists, but you want to increase the partitions next time the application starts.&lt;/h4&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This is possible. Let’s say that your topic is already provisioned with 64 partitions, now you want to double that to 128 due to some higher capacity requirements. You let the binder know that by using either of the properties discussed in scenario 1. (&lt;code&gt;spring.cloud.stream.kafka.binder.min-partition-count&lt;/code&gt; or &lt;code&gt;spring.cloud.stream.bindings.&amp;lt;binding-name&amp;gt;.producer.partition-count&lt;/code&gt;)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;In this case, the binder detects that the topic already exists. If the topic’s current partition size is less than what is requested, then the binder checks for a property &lt;code&gt;spring.cloud.stream.kafka.binder.autoAddPartitions&lt;/code&gt;. By default, this is set to &lt;code&gt;false&lt;/code&gt;. So, if the application has a need for increasing the partitions, this has to be explicitly set to &lt;code&gt;true&lt;/code&gt;. If it is set to &lt;code&gt;true&lt;/code&gt;, the provisioner will request the Kafka admin API to increase the number of partitions. If it is not set to true and the new requested number of partitions is higher than the existing number of partitions, then in the case of producers, the binder will complain that it cannot tolerate the lower number of partitions on the broker and throw a provisioning exception. If this happens, you have to either increase the partitions manually or set the &lt;code&gt;autoAddPartitions&lt;/code&gt; property to &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;One thing to note in particular here is that the binder does not allow you to decrease the number of Kafka topic partitions through Spring Cloud Stream.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Bear in mind that increasing or decreasing the partitions (using any mechanism) might break strict ordering within a partition (if that&amp;#8217;s a consideration), depending on your partitioning strategy (see below).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect2"&gt;
+&lt;h3 id="selecting-a-partition"&gt;&lt;a class="anchor" href="#selecting-a-partition"&gt;&lt;/a&gt;Selecting a Partition&lt;/h3&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Now that we understand how topics are partitioned, we need to discuss how to select a partition for a particular record.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;There are three mechanisms to select the partition:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect3"&gt;
+&lt;h4 id="native-kafka-partition-selection"&gt;&lt;a class="anchor" href="#native-kafka-partition-selection"&gt;&lt;/a&gt;Native Kafka Partition Selection&lt;/h4&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;To use native partitioning, configure a custom Partitioner, either at the binder level, using the &lt;code&gt;spring.cloud.stream.kafka.binder.producer-properties.partitioner.class&lt;/code&gt; property
+or at the binding level, using the
+&lt;code&gt;spring.cloud.stream.kafka.bindings.&amp;lt;binding&amp;gt;.producer.configuration.partitioner.class&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect3"&gt;
+&lt;h4 id="directly-setting-the-partition-header"&gt;&lt;a class="anchor" href="#directly-setting-the-partition-header"&gt;&lt;/a&gt;Directly setting the partition header&lt;/h4&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;When using the default Kafka Partitioner, the application can directly set the &lt;code&gt;KafkaHeaders.PARTITION_ID&lt;/code&gt;  header to the desired partition.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect3"&gt;
+&lt;h4 id="spring-cloud-stream-partition-selection"&gt;&lt;a class="anchor" href="#spring-cloud-stream-partition-selection"&gt;&lt;/a&gt;Spring Cloud Stream Partition Selection&lt;/h4&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;When using Spring Cloud Stream partitioning, leave the kafka partitioner to use its default partitioner, which will simply use the partition set in the producer record by the binder. In the following sections, we will see details of this support provided by Spring Cloud Stream.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect2"&gt;
+&lt;h3 id="how-does-a-spring-cloud-stream-producer-determine-which-partition-to-assign"&gt;&lt;a class="anchor" href="#how-does-a-spring-cloud-stream-producer-determine-which-partition-to-assign"&gt;&lt;/a&gt;How does a Spring Cloud Stream producer determine which partition to assign?&lt;/h3&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;How is it that the producer assigns records to the right partitions using Spring Cloud Stream? What are the controls available for doing so in Spring Cloud Stream? The remainder of this blog will focus on these questions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect3"&gt;
+&lt;h4 id="deciding-on-a-partition-key"&gt;&lt;a class="anchor" href="#deciding-on-a-partition-key"&gt;&lt;/a&gt;Deciding on a partition key&lt;/h4&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Spring Cloud Stream provides two mechanisms for the application to decide on a partition key.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect4"&gt;
+&lt;h5 id="1-partition-key-expression"&gt;&lt;a class="anchor" href="#1-partition-key-expression"&gt;&lt;/a&gt;1. Partition key expression&lt;/h5&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;A simple approach is to provide the partition key as a SpEL expression property. Here is an example.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;code&gt;spring.cloud.stream.bindings.&amp;lt;binding-name&amp;gt;.producer.partition-key-expression: headers['partitionKey']&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Then your application, when publishing the message, can add a header called partitonKey. Spring Cloud Stream will use the value for this header when evaluating the above expression to assign a partition key. Here is an example producer code:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code&gt;@Bean
+public Supplier&amp;lt;Message&amp;lt;?&amp;gt;&amp;gt; generate() {
+  return () -&amp;gt; {
+     String value = “random payload”;
+    	return MessageBuilder.withPayload(value)
+           .setHeader("partitionKey", value.length() % 4)
+           .build();
+  };
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect4"&gt;
+&lt;h5 id="2-partition-key-extractor-strategy"&gt;&lt;a class="anchor" href="#2-partition-key-extractor-strategy"&gt;&lt;/a&gt;2. Partition key extractor strategy&lt;/h5&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Spring Cloud Stream provides an API called PartitionKeyExtractorStrategy which has a single method to implement - &lt;code&gt;Object extractKey(Message&amp;lt;?&amp;gt; message)&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;You can implement this interface and configure it as a bean. Then provide a property &lt;code&gt;spring.cloud.stream.bindings.&amp;lt;binding-name&amp;gt;.producer.parition-key-extractor-name&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;And then provide the bean name.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;If you only have one such bean, then you can ignore providing this as a property. Spring Cloud Stream will simply pick this bean as the partition extractor strategy.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Setting a key using a partition key extractor strategy is the default mechanism. Spring Cloud Stream will only look for the partition key expression if an extractor strategy is not given.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Please bear in mind that this partition key we discussed here may not be the same as the ultimate partition the record will land upon. For that we need to use a partition selector that is using this key.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect3"&gt;
+&lt;h4 id="selecting-the-actual-partition"&gt;&lt;a class="anchor" href="#selecting-the-actual-partition"&gt;&lt;/a&gt;Selecting the actual partition&lt;/h4&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;We selected a partition key, now how does it select the actual partition on Kafka topic?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Ok, now we got Spring Cloud Stream to decide on a partition key to use. But, how about actually selecting the partition based on this key? Similar to the partition key selection options, Spring Cloud Stream provides two different mechanisms for selecting the partition with a given key.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect4"&gt;
+&lt;h5 id="1-use-a-partition-selector-strategy"&gt;&lt;a class="anchor" href="#1-use-a-partition-selector-strategy"&gt;&lt;/a&gt;1. Use a Partition Selector Strategy`&lt;/h5&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Once again, this is a functional interface with a single method - &lt;code&gt;int selectPartition(Object key, int partitionCount)&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;You can implement this method and provide it as a bean. If you only have one such bean, you don’t need any additional property. If there are more than one, then you can define it per binding using the property &lt;code&gt;spring.cloud.stream.bindings.&amp;lt;binding-name&amp;gt;.producer.parition-selector-name&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect4"&gt;
+&lt;h5 id="2-partition-selector-expression"&gt;&lt;a class="anchor" href="#2-partition-selector-expression"&gt;&lt;/a&gt;2. Partition Selector Expression&lt;/h5&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;If you don’t want to implement a partition selector strategy, you can also provide a SpEL expression that evaluates against the key.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;If neither of these options are provided, then Spring Cloud Stream will use a default Partition Selector Strategy which is based on taking the hashCode of the key and then doing a modulo operation with the total partition count on the topic. Unless you have sophisticated needs, this default strategy will work in most cases.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect2"&gt;
+&lt;h3 id="why-is-the-binder-providing-two-different-abstractions"&gt;&lt;a class="anchor" href="#why-is-the-binder-providing-two-different-abstractions"&gt;&lt;/a&gt;Why is the binder providing two different abstractions?&lt;/h3&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;You might be wondering why we have these two different abstractions. First a partition key and then a partition selector. Partition key could be anything - for example, it could be an integer, a string (maybe a text with arbitrary length) or some other type. Partition selector will select a key based on the partition key expression. The selector also makes sure that the partition selected is bound within the available number of partitions. The default implementation does it by doing a modulo division of the hash code of the partition key and the total number of partitions. For this reason, when you have partitioning use cases like these, you must specify the &lt;code&gt;partittionCount&lt;/code&gt; property on the producer. In summary, &lt;code&gt;PartitionKey&lt;/code&gt; is a piece of data used by PartitionSelector to select the actual partition.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Let’s take a concrete example. Assume that you are writing an application that deals with credit card transactions. This application uses the credit card number as the partition key - a long random number with x number of digits. Imagine that depending on the first 4 digits of the credit card, you want to send that transaction to a particular partition in the topic. How do you do that? First, you set your &lt;code&gt;partitionKeyExpression&lt;/code&gt; by parsing the card number to extract the first 4 digits (or provide a partition key extractor strategy). Then, you need to provide a partition selector strategy implementation in which, based on the key and the number of partitions, you select the key. If you don’t provide this or a partition key selector expression against the key, then the default partition selector strategy will select one for you. Say, your first 4 digits are 1234 and you have 10 partitions on the topic. Let’s say that the hash is computed as 1234 also. Then, this will land in partition &lt;code&gt;1234 % 10 = 4&lt;/code&gt;. If you rather want this transaction to come to partition 8 for whatever reason, then you have to explicitly implement that in partition selector strategy class or expression.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Following is a flow chart representation of how these two different layers fit together.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;span class="image"&gt;&lt;img src="https://github.com/spring-cloud/spring-cloud-stream-binder-kafka/raw/gh-pages/images/kafka-producer-partitions-blog.png" alt="kafka producer partitions blog"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect2"&gt;
+&lt;h3 id="confusion-between-partition-key-and-the-message-key"&gt;&lt;a class="anchor" href="#confusion-between-partition-key-and-the-message-key"&gt;&lt;/a&gt;Confusion between partition key and the message key&lt;/h3&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Sometimes it is confusing to think through partition keys and the actual message keys going down the wire through the actual Kafka topic to be used on the Kafka record as the key. It is done through a different mechanism. The above partition key and the selector simply ensures that a partition key is chosen and based on that partition key, an actual partition is selected on the Kafka topic. But, how do you send a key with the record when producing? Here again, you can choose from two options. One is simply to attach a header into the outgoing message. Here is an example.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code&gt;@Bean Supplier&amp;lt;Message&amp;lt;String&amp;gt;&amp;gt; process() {
+   return () -&amp;gt; MessageBuilder.withPayload("foo")
+     .setHeader(KafkaHeaders.MESSAGE_KEY, "bar".getBytes()) .build(); }&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;You can also use a message key SpEL expression on the Kafka binder as below.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;code&gt;spring.cloud.stream.kafka.binder.messageKeyExpression: headers['messageKey']&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Then attach this header on the outgoing message.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect2"&gt;
+&lt;h3 id="some-caveats-to-keep-in-mind"&gt;&lt;a class="anchor" href="#some-caveats-to-keep-in-mind"&gt;&lt;/a&gt;Some caveats to keep in mind&lt;/h3&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;If you don’t provide a partition key expression or partition key extractor bean, then Spring Cloud Stream will completely stay out of the business of making any partition decision for you. In that case, if the topic has more than one partition, Kafka’s default partitioning mechanisms will be triggered. By default, Kafka uses a DefaultPartitioner, which if the message has a key (see above), then using the hash of this key for computing the partition. If the message does not have a key, then it will be assigned using a round robin strategy. Starting with Kafka client 2.4 onwards, there are some additional complexities to keep in mind. If the record doesn’t carry the partition information (the main discussion of this blog) or if the record is missing a key, then starting with Kafka 2.4, it will use sticky partitions instead of a round-robin strategy. In a nutshell, sticky partitions are used to minimize the latency by sticking the records to a partition or a group of partitions. For more information on sticky partitions, see KIP-480 &lt;a href="https://cwiki.apache.org/confluence/display/KAFKA/KIP-480%3A+Sticky+Partitioner" class="bare"&gt;https://cwiki.apache.org/confluence/display/KAFKA/KIP-480%3A+Sticky+Partitioner&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect2"&gt;
+&lt;h3 id="conclusion"&gt;&lt;a class="anchor" href="#conclusion"&gt;&lt;/a&gt;Conclusion&lt;/h3&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;In this blog, we discussed how Spring Cloud Stream can help with dealing with Kafka partitions when writing a producer based application. We saw a number of ways Spring Cloud Stream gives controls to the application developer to configure the various nuances of partitions. We saw the differences between partition key, partition selector and message key. We discussed how message keys can be added to a Kafka record. Finally, we looked at how Spring Cloud Stream producers can completely stay out of the partitioning business and let Kafka tackle it directly.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - February 2nd, 2020</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/02/02/this-week-in-spring-february-2nd-2020" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2021-02-03:4351</id>
+    <updated>2021-02-03T02:44:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! Can you believe we&amp;rsquo;re already square into the second month of 2021? We&amp;rsquo;re 1/12th of the way through the year already! IT&amp;rsquo;S ALL GOING SO QUICK! So, I won&amp;rsquo;t waste any further time, let&amp;rsquo;s get to the roundup! &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;This is a fantastic video by the legendary Brian Sam Boden on &lt;a href="https://www.youtube.com/watch?v=XJoJCMfCSTk&amp;feature=emb_title"&gt;&lt;em&gt;building a Spring Boot REST API powered by Redis, with a React front end: Part 1&lt;/em&gt; &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://blogs.vmware.com/opensource/2021/02/02/2021-a-look-ahead-for-open-source-at-vmware/"&gt;2021: A Look Ahead for Open Source at VMware&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/01/28/a-bootiful-podcast-appdynamics-pavol-loffay"&gt;A Bootiful Podcast: Traceable&amp;rsquo;s Pavol Loffay, creator of the Hypertrace Java agent&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.infoq.com/news/2021/01/graalvm-21-jvm-java/"&gt;GraalVM 21.0 Introduces a JVM Written in Java&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://medium.com/sipios/handle-r2dbc-in-spring-projects-fa96e65ca24d"&gt;Handle R2DBC in Spring Projects, &lt;/a&gt; an article by Thibault MONEGIER du SORBIER&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.meetup.com/seajug/events/276135388/"&gt;I&amp;rsquo;ll be speaking at the Seattle JUG Meetup on February 16th, 2021&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://blogs.oracle.com/developers/new-year-goodies-oracle-jdbc-21100-on-maven-central"&gt;New Year Goodies - Oracle JDBC 21.1.0.0 on Maven Central | Oracle Developers Blog&lt;/a&gt;. I linked to this because, at the bottom of the blog, they also mention that people can expect the reactive Oracle R2DBC driver soon, too! Huzzah!&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.vinsguru.com/rsocket-load-balancing-client-side/"&gt;RSocket Load Balancing - Client Side by Vinsguru&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.infoq.com/articles/running-axon-server-docker-kubernetes/?itm_campaign=rightbar_v2&amp;itm_source=infoq&amp;itm_medium=articles_link&amp;itm_content=link_text"&gt;Running Axon Server in Docker and Kubernetes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/01/27/spring-batch-on-kubernetes-efficient-batch-processing-at-scale"&gt;Spring Batch on Kubernetes: Efficient batch processing at scale&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/01/28/spring-cloud-2020-0-1-aka-ilford-is-available"&gt;Spring Cloud 2020.0.1 (aka Ilford) Is Available&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/02/01/spring-integration-aws-2-3-5-release-2-4-0-and-spring-cloud-stream-kinesis-binder-2-0-4-release-2-1-0-available"&gt;Spring Integration AWS 2.3.5.RELEASE &amp;amp; 2.4.0, and Spring Cloud Stream Kinesis Binder 2.0.4.RELEASE &amp;amp; 2.1.0 Available&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/02/01/ymnnalft-a-lightweight-sql-data-mapper-with-the-jdbctemplate"&gt;YMNNALFT: A lightweight SQL data mapper with the JdbcTemplate&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/01/27/ymnnalft-the-spring-utils-classes"&gt;YMNNALFT: The Spring Utils Classes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/JavaAtMicrosoft/status/1354831588916305922"&gt;Last year Azure #Spring Cloud became Generally Available. Here&amp;rsquo;s what has changed since then! &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/JavaAtMicrosoft/status/1356334244008611840"&gt;Apple announced M1, an impl of AArch64. #OpenJDK was ready for it; had been for 5 years. However there&amp;rsquo;s a layer that’s specific to each OS-CPU combination. However there&amp;rsquo;s a layer that’s specific to each OS-CPU combination. We had volunteers: Microsoft and Azul, who worked together. Microsoft also ported to Win/AArch64 &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/VMware/status/1356739950620905472"&gt; Today, we’re excited to announce dates for VMware conferences slated for this year &amp;ndash; VMworld, CloudLIVE, Connect, and SpringOne! &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Integration AWS 2.3.5.RELEASE &amp; 2.4.0,  and Spring Cloud Stream Kinesis Binder 2.0.4.RELEASE &amp; 2.1.0 Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/02/01/spring-integration-aws-2-3-5-release-2-4-0-and-spring-cloud-stream-kinesis-binder-2-0-4-release-2-1-0-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Artem Bilan</name>
+    </author>
+    <id>tag:spring.io,2021-02-01:4350</id>
+    <updated>2021-02-01T16:05:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;Dear Spring Community,&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Today it&amp;#8217;s my pleasure to announce releases of Spring Integration for Amazon Web Services extension versions &lt;code&gt;2.3.5.RELEASE&lt;/code&gt; &amp;amp; &lt;code&gt;2.4.0&lt;/code&gt;, and Spring Cloud Stream Binder for AWS Kinesis versions &lt;code&gt;2.0.4.RELEASE&lt;/code&gt; &amp;amp; &lt;code&gt;2.1.0&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;These releases can be downloaded from Maven Central, JCenter:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="groovy"&gt;compile "org.springframework.integration:spring-integration-aws:2.3.5.RELEASE"&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;If you don&amp;#8217;t use Kinesis Binder.
+Or via Binder dependency:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="groovy"&gt;compile "org.springframework.cloud:spring-cloud-stream-binder-kinesis:2.0.4.RELEASE"&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Mostly these versions have bug fixes and some community feedback refinements.
+So, it is highly recommended to bump your projects to this latest versions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The new minor versions (&lt;code&gt;spring-integration-aws:2.4.0&lt;/code&gt; &amp;amp; &lt;code&gt;spring-cloud-stream-binder-kinesis:2.1.0&lt;/code&gt;) have the same fixes content, but with an upgrade to the latest Spring Integration and Spring Cloud Stream versions for compatibility with the latest Spring Boot and Spring Cloud, respectively.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Many thanks to everyone from the Community for all the feedback and contribution to these projects.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Any feedback is welcome via all the available communication channels!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Spring Integration for AWS resources:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-integration-aws"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/blob/master/CONTRIBUTING.adoc"&gt;Contributing&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-integration"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-integration"&gt;Chat&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Spring Cloud Stream Binder for AWS Kinesis resources:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-stream-binder-aws-kinesis"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-binder-aws-kinesis/blob/master/spring-cloud-stream-binder-kinesis-docs/src/main/asciidoc/contributing.adoc"&gt;Contributing&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-cloud-stream"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-cloud-stream"&gt;Chat&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>YMNNALFT: A lightweight SQL data mapper with the JdbcTemplate</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/02/01/ymnnalft-a-lightweight-sql-data-mapper-with-the-jdbctemplate" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2020-12-30:4324</id>
+    <updated>2021-02-01T11:00:00Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;You May Not Need Another Library For That&lt;/em&gt; (YMNNALFT)! I&amp;rsquo;ve spent a lot of time since 2016 illuminating (or trying to, anyway!) some of the more enormous opportunities in the Spring ecosystem in &lt;a href="http://bit.ly/spring-tips-playlist"&gt;my Spring Tips videos&lt;/a&gt;. Today, however, I come to you in a different spirit, wanting to focus on the little, sometimes hidden, gems that do fantastic things and that might spare you an additional third-party dependency and its implied complexity. &lt;/p&gt;
+&lt;p&gt;I think the first use I had for Spring, more than 15 years ago, was the &lt;code&gt;JdbcTemplate&lt;/code&gt;, which eliminated the eye-watering and verbose work of using JDBC directly. As you might know, JDBC stands for &amp;ldquo;Just Don&amp;rsquo;t Break, Compiler!&amp;rdquo; and was designed to test the JVM limit of 65535 bytes of bytecode per method by providing an API that consistently requires more lines of code than that to do even basic things. &lt;/p&gt;
+&lt;p&gt;Thus just in. I&amp;rsquo;m being told that JDBC is, in fact, the Java Database Connectivity API. Moving on&amp;hellip; &lt;/p&gt;
+&lt;p&gt;I couldn&amp;rsquo;t use Spring as a framework in the project at the time, but I &lt;em&gt;could&lt;/em&gt; bring in Spring as a sort of library. I brought it in initially to get access to the &lt;code&gt;JdbcTemplate&lt;/code&gt;, and the concept of the various &lt;code&gt;*Template&lt;/code&gt; objects as a whole. &lt;/p&gt;
+&lt;p&gt;A template object is an excellent example of the inversion-of-control principle. You let the template object do 90% of the work and provide it with a callback to be invoked when the template needs your input on something. Templates invert the application flow; they do the tedious stuff and then involve you only when it&amp;rsquo;s time to do the thing you want to do. They&amp;rsquo;re kind of like &lt;em&gt;mini-frameworks&lt;/em&gt;. &lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;JdbcTemplate&lt;/code&gt; is one of the best-known templates in the Java ecosystem, and for a good reason. JDBC is a low-level API in the Java ecosystem for working with SQL databases. It&amp;rsquo;s powerful, and it has dominated for &lt;em&gt;decades&lt;/em&gt;. But it is, at the end of the day, &lt;em&gt;very&lt;/em&gt; low level. You&amp;rsquo;re not going to get very far writing this code yourself. &lt;/p&gt;
+&lt;p&gt;The alternatives were brittle (at the time) technologies like Hibernate, Apache OJB, any of the various, mildly incompatible JDO implementations, iBatis, or - &lt;em&gt;gasp!&lt;/em&gt; - EJB 1.x or 2.x persistent entity beans. Most of these were way too top-heavy for the work I was trying to do. I loved iBatis (and continue to love its &lt;a href="http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/"&gt;successor MyBatis&lt;/a&gt;), but I found I could get far with just the &lt;code&gt;JdbcTemplate&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;JdbcTemplate&lt;/code&gt; is part of a rich class arrangement and various abstractions for working with SQL databases. Nowadays, there&amp;rsquo;s even a non-blocking, reactive alternative to JDBC available to the Spring developer: &lt;a href="https://R2DBC.io"&gt;R2DBC&lt;/a&gt;. Most data access logic today uses JDBC (indirectly, if nothing else), alas, so let&amp;rsquo;s look at an example of that. &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+  &lt;p&gt;JDBC on &lt;a href="http://start.spring.io"&gt;the Spring Initializr&lt;/a&gt; - &lt;code&gt;org.springframework.boot&lt;/code&gt; : &lt;code&gt;spring-boot-starter-jdbc&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+  &lt;p&gt;H2 on &lt;a href="http://start.spring.io"&gt;the Spring Initializr&lt;/a&gt; - &lt;code&gt;com.h2database&lt;/code&gt; : &lt;code&gt;h2&lt;/code&gt; &lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here&amp;rsquo;s the code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;package bootiful.data;&#xD;
+&#xD;
+import lombok.SneakyThrows;&#xD;
+import org.springframework.boot.SpringApplication;&#xD;
+import org.springframework.boot.autoconfigure.SpringBootApplication;&#xD;
+import org.springframework.boot.context.event.ApplicationReadyEvent;&#xD;
+import org.springframework.context.ApplicationListener;&#xD;
+import org.springframework.context.annotation.Bean;&#xD;
+import org.springframework.core.io.ClassPathResource;&#xD;
+import org.springframework.core.io.Resource;&#xD;
+import org.springframework.jdbc.core.JdbcTemplate;&#xD;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;&#xD;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;&#xD;
+import org.springframework.util.FileCopyUtils;&#xD;
+&#xD;
+import javax.sql.DataSource;&#xD;
+import java.io.InputStreamReader;&#xD;
+import java.io.Reader;&#xD;
+import java.util.List;&#xD;
+&#xD;
+@SpringBootApplication&#xD;
+public class BootifulApplication {&#xD;
+&#xD;
+	public static void main(String[] args) {&#xD;
+		SpringApplication.run(BootifulApplication.class, args);&#xD;
+	}&#xD;
+&#xD;
+	@Bean&#xD;
+	DataSource dataSource() {&#xD;
+		return new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.H2).build();&#xD;
+	}&#xD;
+&#xD;
+	@SneakyThrows&#xD;
+	private String loadSql() {&#xD;
+		Resource resource = new ClassPathResource(&amp;quot;/initialization.sql&amp;quot;);&#xD;
+		try (Reader r = new InputStreamReader(resource.getInputStream())) {&#xD;
+			return FileCopyUtils.copyToString(r);&#xD;
+		}&#xD;
+	}&#xD;
+&#xD;
+	@Bean&#xD;
+	ApplicationListener&amp;lt;ApplicationReadyEvent&amp;gt; ready(DataSource dataSource) {&#xD;
+		return event -&amp;gt; {&#xD;
+			String sql = loadSql();&#xD;
+			String[] names = new String[] { &amp;quot;Spencer&amp;quot;, &amp;quot;Violetta&amp;quot;, &amp;quot;Madhura&amp;quot;, &amp;quot;Yuxin&amp;quot;, &amp;quot;Stéphane&amp;quot;, &amp;quot;Dr. Syer&amp;quot; };&#xD;
+			JdbcTemplate template = new JdbcTemplate(dataSource);&#xD;
+			template.execute(sql);&#xD;
+			for (var name : names) {&#xD;
+				template.update(&amp;quot;insert into CUSTOMER(name) values(?)&amp;quot;, name);&#xD;
+			}&#xD;
+			List&amp;lt;Customer&amp;gt; results = template.query(&amp;quot;select * from CUSTOMER&amp;quot;,&#xD;
+					(resultSet, i) -&amp;gt; new Customer(resultSet.getInt(&amp;quot;id&amp;quot;), resultSet.getString(&amp;quot;name&amp;quot;)));&#xD;
+			results.forEach(System.out::println);&#xD;
+		};&#xD;
+	}&#xD;
+&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you don&amp;rsquo;t mind rolling up your sleeves and slinging a little SQL (and why would you? SQL is &lt;em&gt;awesome&lt;/em&gt;!), then you&amp;rsquo;ll feel right at home using the &lt;code&gt;JdbcTemplate&lt;/code&gt; and the various commands classes in the JDBC module. If not, Spring continues to meet you where you today with rich integrations for JDBC-centric data access technologies like JOOQ, Hibernate, JPA, MyBatis, Spring Data JPA, Spring Data JDBC, and a slew of other options. &lt;/p&gt;
+&lt;p&gt;Did you like this gem at a glance approach? Did you learn anything? As always, I&amp;rsquo;m keen on hearing from you, so &lt;a href="http://twitter.com/starbuxman"&gt;please sound off on Twitter (@starbuxman) &lt;/a&gt;! I&amp;rsquo;ll be back with another installment of &lt;em&gt;YMNNALFT&lt;/em&gt;, so be sure not to miss that. &lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>A Bootiful Podcast: Hypertrace Java Agent creator Pavol Loffay</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/01/28/a-bootiful-podcast-hypertrace-java-agent-creator-pavol-loffay" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2021-01-29:4349</id>
+    <updated>2021-01-29T01:13:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! In this episode &lt;a href="http://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to Hypertrace Java Agent creator &lt;a href="http://twitter.com/ploffay"&gt;Pavol Loffay (@ploffay)&lt;/a&gt; about telemetry, observability, and more. &lt;/p&gt;
+&lt;iframe title="Hypertrace Java Agent creator Pavol Loffay" height="122" width="100%" style="border: none;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/media/player/vm8cv-f8f4ea?from=pb6admin&amp;download=1&amp;version=1&amp;auto=0&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Helvetica&amp;skin=1&amp;pfauth=&amp;btn-skin=107"&gt;&lt;/iframe&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud 2020.0.1 (aka Ilford) Is Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/01/28/spring-cloud-2020-0-1-aka-ilford-is-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Spencer Gibb</name>
+    </author>
+    <id>tag:spring.io,2021-01-28:4348</id>
+    <updated>2021-01-28T20:38:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the community, I am pleased to announce that Service Release 1 of the &lt;a href="https://cloud.spring.io"&gt;Spring Cloud 2020.0&lt;/a&gt; Release Train (2020.0.1) is available today. The release can be found in &lt;a href="https://repo1.maven.org/maven2/org/springframework/cloud/spring-cloud-dependencies/2020.0.1/"&gt;Maven Central&lt;/a&gt;. You can check out the 2020.0 &lt;a href="https://github.com/spring-projects/spring-cloud/wiki/Spring-Cloud-2020.0-Release-Notes"&gt;release notes for more information&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#notable-changes-in-the-2020-0-0-release-train" class="anchor" name="notable-changes-in-the-2020-0-0-release-train"&gt;&lt;/a&gt;Notable Changes in the 2020.0.0 Release Train&lt;/h2&gt;
+&lt;p&gt;This release was primarliy for bug fixes and dependency upgrades.&lt;/p&gt;
+&lt;p&gt;See &lt;a href="https://github.com/spring-cloud/spring-cloud-release/wiki/Spring-Cloud-2020.0-Release-Notes#known-issues"&gt;this page&lt;/a&gt; for a list of Known Issues.&lt;/p&gt;
+&lt;p&gt;See the &lt;a href="https://github.com/spring-cloud/spring-cloud-release/wiki/Spring-Cloud-2020.0-Release-Notes#breaking-changes"&gt;wiki&lt;/a&gt; for a list of all breaking changes in this release train.&lt;/p&gt;
+&lt;p&gt;See all of the included issues and pull requests at the &lt;a href="https://github.com/orgs/spring-cloud/projects/52"&gt;Github project&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-config" class="anchor" name="spring-cloud-config"&gt;&lt;/a&gt;Spring Cloud Config&lt;/h3&gt;
+&lt;p&gt;All of the &lt;a href="https://github.com/spring-cloud/spring-cloud-release/wiki/Spring-Cloud-2020.0-Release-Notes#known-issues"&gt;known issues&lt;/a&gt; have been fixed.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-consul" class="anchor" name="spring-cloud-consul"&gt;&lt;/a&gt;Spring Cloud Consul&lt;/h3&gt;
+&lt;p&gt;A new &lt;a href="https://github.com/spring-cloud/spring-cloud-release/wiki/Spring-Cloud-2020.0-Release-Notes#known-issues"&gt;known issue&lt;/a&gt; have been found, where the &lt;code&gt;spring.config.import=consul:&lt;/code&gt; does not support retry.&lt;/p&gt;
+&lt;p&gt;The issue with improper order of contexts in the Config module has been fixed.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-zookeeper" class="anchor" name="spring-cloud-zookeeper"&gt;&lt;/a&gt;Spring Cloud Zookeeper&lt;/h3&gt;
+&lt;p&gt;The issue with improper order of contexts in the Config module has been fixed.&lt;/p&gt;
+&lt;hr/&gt;
+&lt;p&gt;The following modules were updated as part of 2020.0.0:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Module &lt;/th&gt;
+      &lt;th&gt;Version &lt;/th&gt;
+      &lt;th&gt;Issues&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Circuitbreaker &lt;/td&gt;
+      &lt;td&gt;2.0.0 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Contract &lt;/td&gt;
+      &lt;td&gt;3.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Kubernetes &lt;/td&gt;
+      &lt;td&gt;2.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Commons &lt;/td&gt;
+      &lt;td&gt;3.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Openfeign &lt;/td&gt;
+      &lt;td&gt;3.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Cloudfoundry &lt;/td&gt;
+      &lt;td&gt;3.0.0 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Bus &lt;/td&gt;
+      &lt;td&gt;3.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Cli &lt;/td&gt;
+      &lt;td&gt;3.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Zookeeper &lt;/td&gt;
+      &lt;td&gt;3.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Sleuth &lt;/td&gt;
+      &lt;td&gt;3.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Consul &lt;/td&gt;
+      &lt;td&gt;3.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Starter Build &lt;/td&gt;
+      &lt;td&gt;2020.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Gateway &lt;/td&gt;
+      &lt;td&gt;3.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Netflix &lt;/td&gt;
+      &lt;td&gt;3.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Vault &lt;/td&gt;
+      &lt;td&gt;3.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Config &lt;/td&gt;
+      &lt;td&gt;3.0.2 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Task &lt;/td&gt;
+      &lt;td&gt;2.3.0 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;As always, we welcome feedback on &lt;a href="https://github.com/spring-cloud/"&gt;GitHub&lt;/a&gt;, on &lt;a href="https://gitter.im/spring-cloud/spring-cloud"&gt;Gitter&lt;/a&gt;, on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud"&gt;Stack Overflow&lt;/a&gt;, or on &lt;a href="https://twitter.com/SpringCloud"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To get started with Maven with a BOM (dependency management only):&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint xml"&gt;&amp;lt;dependencyManagement&amp;gt;&#xD;
+    &amp;lt;dependencies&amp;gt;&#xD;
+        &amp;lt;dependency&amp;gt;&#xD;
+            &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+            &amp;lt;artifactId&amp;gt;spring-cloud-dependencies&amp;lt;/artifactId&amp;gt;&#xD;
+            &amp;lt;version&amp;gt;2020.0.1&amp;lt;/version&amp;gt;&#xD;
+            &amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;&#xD;
+            &amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt;&#xD;
+        &amp;lt;/dependency&amp;gt;&#xD;
+    &amp;lt;/dependencies&amp;gt;&#xD;
+&amp;lt;/dependencyManagement&amp;gt;&#xD;
+&amp;lt;dependencies&amp;gt;&#xD;
+    &amp;lt;dependency&amp;gt;&#xD;
+        &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+        &amp;lt;artifactId&amp;gt;spring-cloud-starter-config&amp;lt;/artifactId&amp;gt;&#xD;
+    &amp;lt;/dependency&amp;gt;&#xD;
+    &amp;lt;dependency&amp;gt;&#xD;
+        &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+        &amp;lt;artifactId&amp;gt;spring-cloud-starter-netflix-eureka-client&amp;lt;/artifactId&amp;gt;&#xD;
+    &amp;lt;/dependency&amp;gt;&#xD;
+    ...&#xD;
+&amp;lt;/dependencies&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or with Gradle:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint groovy"&gt;buildscript {&#xD;
+  dependencies {&#xD;
+    classpath &amp;quot;io.spring.gradle:dependency-management-plugin:1.0.11.RELEASE&amp;quot;&#xD;
+  }&#xD;
+}&#xD;
+&#xD;
+apply plugin: &amp;quot;io.spring.dependency-management&amp;quot;&#xD;
+&#xD;
+dependencyManagement {&#xD;
+  imports {&#xD;
+    mavenBom &amp;#39;org.springframework.cloud:spring-cloud-dependencies:2020.0.1&amp;#39;&#xD;
+  }&#xD;
+}&#xD;
+&#xD;
+dependencies {&#xD;
+  compile &amp;#39;org.springframework.cloud:spring-cloud-starter-config&amp;#39;&#xD;
+  compile &amp;#39;org.springframework.cloud:spring-cloud-starter-netflix-eureka-client&amp;#39;&#xD;
+  //...&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Spring Batch on Kubernetes: Efficient batch processing at scale</title>
     <link rel="alternate" href="https://spring.io/blog/2021/01/27/spring-batch-on-kubernetes-efficient-batch-processing-at-scale" />
@@ -702,7 +1320,7 @@ class Customer implements Serializable {&#xD;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2021/01/21/bootiful-application-monitoring-with-azure-spring-cloud"&gt;Bootiful Application Monitoring with Azure Spring Cloud&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://twitter.com/JavaAtMicrosoft/status/1352321956138217474"&gt;You can monitor Azure Spring Cloud Spring Boot apps and dependencies without any effort! Brought to you jointly by Microsoft and VMware &lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2021/01/20/ymnnalft-dimensional-metrics-accumulation-with-micrometer"&gt;YMNNALFT: Dimensional Metrics Accumulation with Micrometer&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=j6y-k0j7hd4&amp;feature=share"&gt;Building a Spring Boot and Spring MVC web application&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=j6Y-K0J7HD4&amp;feature=share"&gt;Building a Spring Boot and Spring MVC web application&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://developer.okta.com/blog/2021/01/20/reactive-java-microservices"&gt;The Okta blog has a nice post on reactive Java microservices &lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://github.com/trankchung/kubeswitch/"&gt;Kubeswitch v0.2.0 - Kubernetes context and namespace switching&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://www.javavogue.com/2019/02/how-to-create-a-rest-api-with-spring-boot/"&gt;How to create a REST API with Spring Boot&lt;/a&gt;&lt;/li&gt;
@@ -1313,299 +1931,6 @@ public class BootifulApplication {&#xD;
   &lt;p&gt;Here, you can see that the default client experience of an RSocket service is more like that of an HTTP endpoint or an exchange with a message queue. We&amp;rsquo;re sending request messages to endpoints, which are more like URIs, not distributed methods. That said, if you &lt;em&gt;really&lt;/em&gt; are all about that RPC life and don&amp;rsquo;t mind an &lt;em&gt;optional&lt;/em&gt; extra dependency. You &lt;em&gt;might&lt;/em&gt; &lt;a href="http://github.com/spring-projects-experimental"&gt;consider the &lt;em&gt;experimental&lt;/em&gt; Spring Retrosocket project&lt;/a&gt;, which we launched to support this use case precisely. It provides a Netflix-feign like RPC experience, but for RSocket. &lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Did you like this gem at a glance approach? Did you learn anything? As always, I&amp;rsquo;m keen on hearing from you, so &lt;a href="http://twitter.com/starbuxman"&gt;please sound off on Twitter (@starbuxman) &lt;/a&gt;! I&amp;rsquo;ll be back with another installment of &lt;em&gt;YMNNALFT&lt;/em&gt;, so be sure not to miss that. &lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>What's new in Spring Boot 2.4</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/01/17/what-s-new-in-spring-boot-2-4" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Phil Webb</name>
-    </author>
-    <id>tag:spring.io,2021-01-17:4339</id>
-    <updated>2021-01-17T16:48:00Z</updated>
-    <content type="html">&lt;p&gt;Speaker: &lt;a href="http://twitter.com/phillip_webb"&gt;Phil Webb (@phillip_webb)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Sorry for the small font! You might want to watch this at a computer in full screen.&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/lgyO9C9zdrg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;h2&gt;&lt;a href="#timecodes" class="anchor" name="timecodes"&gt;&lt;/a&gt;Timecodes&lt;/h2&gt;
-&lt;p&gt;Use the timecodes below if you want to jump to a specific part of the presentation:&lt;/p&gt;&lt;h3&gt;&lt;a href="#intro" class="anchor" name="intro"&gt;&lt;/a&gt;Intro&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://youtu.be/lgyO9C9zdrg?t=0027s"&gt;00:27&lt;/a&gt; - Creating a Demo App&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#upgrading" class="anchor" name="upgrading"&gt;&lt;/a&gt;Upgrading&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://youtu.be/lgyO9C9zdrg?t=0444s"&gt;07:24&lt;/a&gt; - Version Number Changes&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://youtu.be/lgyO9C9zdrg?t=0509s"&gt;08:29&lt;/a&gt; - JUnit Vintage Engine&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://youtu.be/lgyO9C9zdrg?t=0547s"&gt;09:07&lt;/a&gt; - Legacy Config Data Mode&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://youtu.be/lgyO9C9zdrg?t=0648s"&gt;10:48&lt;/a&gt; - Logback Property Changes and Property Migrator&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#new-features" class="anchor" name="new-features"&gt;&lt;/a&gt;New Features&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://youtu.be/lgyO9C9zdrg?t=0831s"&gt;13:51&lt;/a&gt; - Java 15 and Startup Logging&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://youtu.be/lgyO9C9zdrg?t=0903s"&gt;15:03&lt;/a&gt; - Constructor Binding @ConfigurationProperties Updates&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://youtu.be/lgyO9C9zdrg?t=1091s"&gt;18:11&lt;/a&gt; - ApplicationStartup Metrics (Flight Recorder and JSON)&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://youtu.be/lgyO9C9zdrg?t=1489s"&gt;24:49&lt;/a&gt; - Changes to Application properties/yaml&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://youtu.be/lgyO9C9zdrg?t=1846s"&gt;30:46&lt;/a&gt; - Using &amp;lsquo;spring.config.import&amp;rsquo;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://youtu.be/lgyO9C9zdrg?t=2086s"&gt;34:46&lt;/a&gt; - Importing Files Without an Extension&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://youtu.be/lgyO9C9zdrg?t=2128s"&gt;35:28&lt;/a&gt; - Origin Chains&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://youtu.be/lgyO9C9zdrg?t=2314s"&gt;38:34&lt;/a&gt; - Config Tree Support (Kubernetes Volume Mounted Secrets)&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://youtu.be/lgyO9C9zdrg?t=2451s"&gt;40:51&lt;/a&gt; - Supporting Custom Config Data Import Types&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://youtu.be/lgyO9C9zdrg?t=2577s"&gt;42:57&lt;/a&gt; - Docker and Buildpack Updates&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://youtu.be/lgyO9C9zdrg?t=2769s"&gt;46:09&lt;/a&gt; - Publishing to a Private Docker Registry&lt;/li&gt;
-&lt;/ul&gt;&lt;h2&gt;&lt;a href="#links" class="anchor" name="links"&gt;&lt;/a&gt;Links&lt;/h2&gt;
-&lt;p&gt;The following links are useful for the presentation:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.4-Release-Notes"&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Building OCI Images [&lt;a href="https://docs.spring.io/spring-boot/docs/current/maven-plugin/reference/html/#build-image"&gt;Maven&lt;/a&gt;|&lt;a href="https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/html/#build-image"&gt;Gradle&lt;/a&gt;]&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-boot/blob/master/CONTRIBUTING.adoc"&gt;Contributing Instructions&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://start.spring.io"&gt;start.spring.io&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/wagoodman/dive"&gt;Docker Image Inspection Tool (dive)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://goharbor.io/"&gt;Private Docker Registry (Harbor)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Boot 2.4.2 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/01/14/spring-boot-2-4-2-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Phil Webb</name>
-    </author>
-    <id>tag:spring.io,2021-01-15:4338</id>
-    <updated>2021-01-15T05:36:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Boot 2.4.2 has been released and is now available from Maven Central.&lt;/p&gt;
-&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.4.2"&gt;a number bug fixes and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
-&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="http://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="http://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/2.4.2.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>A Bootiful Podcast - Spring Cloud Stream lead Oleg Zhurakousky</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/01/14/a-bootiful-podcast-spring-cloud-stream-lead-oleg-zhurakousky" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2021-01-15:4337</id>
-    <updated>2021-01-15T01:58:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;A Bootiful Podcast&lt;/em&gt;. This week, &lt;a href="http://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to Spring Cloud Stream &lt;a href="https://twitter.com/z_oleg"&gt;lead Oleg Zhurakousky (@z_oleg)&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;iframe title="Spring Cloud Stream lead Oleg Zhurakousky" height="122" width="100%" style="border: none;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/media/player/gagc3-f79a60?from=pb6admin&amp;download=1&amp;version=1&amp;auto=0&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Helvetica&amp;skin=1&amp;pfauth=&amp;btn-skin=107"&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Boot 2.3.8 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/01/14/spring-boot-2-3-8-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Scott Frederick</name>
-    </author>
-    <id>tag:spring.io,2021-01-14:4336</id>
-    <updated>2021-01-14T19:52:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Boot 2.3.8 has been released and is now available from Maven Central.&lt;/p&gt;
-&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.3.8.RELEASE"&gt;35 bug fixes and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
-&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="http://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="http://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/2.3.8.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Boot 2.2.13 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/01/14/spring-boot-2-2-13-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Stéphane Nicoll</name>
-    </author>
-    <id>tag:spring.io,2021-01-14:4335</id>
-    <updated>2021-01-14T17:25:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Boot 2.2.13 has been released and is now available from Maven Central.&lt;/p&gt;
-&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.2.13.RELEASE"&gt;19 bug fixes and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
-&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="http://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="http://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/2.2.13.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>The latest on Azure Active Directory integration</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/01/13/the-latest-on-azure-active-directory-integration" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Andy Clement</name>
-    </author>
-    <id>tag:spring.io,2021-01-13:4334</id>
-    <updated>2021-01-13T20:21:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;Whether you are building a web API, mobile front end or a good-old fashioned desktop application, identity and access management will always be foundational pieces that are front and center in writing software. Azure offers a great platform to democratize your application development journey, as it not only offers a cloud-base identity service, but also deep integration with the rest of the Azure ecosystem. Spring Security has made it easy to secure your Spring based applications with powerful abstractions and extensible interfaces. However as powerful as the Spring framework can be, it is not tailored to a specific identity provider. The Azure Spring Boot Starter for Azure Active Directory is the result of collaborative efforts from Microsoft and VMware to provide the most optimal way to connect your application to an Azure AD tenant and protect resource APIs with Azure Active Directory. Case in point, there are scenarios where you may want to authorize against multiple resource servers, and you can simply do that by including multiple authorization clients in your application configuration.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;To get started with the Azure Spring boot starter for Azure Active Directory, connect your application to an Azure AD tenant, and include the following configuration in your &lt;code&gt;application.yml&lt;/code&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="yml"&gt;azure:
-  activedirectory:
-    tenant-id: xxxxxx-your-tenant-id-xxxxxx
-    client-id: xxxxxx-your-client-id-xxxxxx
-    client-secret: xxxxxx-your-client-secret-xxxxxx
-    authorization-clients:
-      graph:
-        scopes:
-            - https://graph.microsoft.com/User.Read
-            - https://graph.microsoft.com/Directory.AccessAsUser.All&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Get the &lt;code&gt;OAuth2AuthorizedClient&lt;/code&gt; in your Controller:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="java"&gt;@GetMapping("/graph")
-@ResponseBody
-public String graph(
-    @RegisteredOAuth2AuthorizedClient("graph") OAuth2AuthorizedClient client
-) {
-// Now you can use the access token to access a graph URI
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;For more detail see our  &lt;a href="https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-samples/azure-spring-boot-sample-active-directory-webapp"&gt;sample project&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Let&amp;#8217;s look at some of the recent enhancements in the starter:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="web-applications"&gt;&lt;a class="anchor" href="#web-applications"&gt;&lt;/a&gt;Web applications&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="sect2"&gt;
-&lt;h3 id="integration-with-microsoft-api"&gt;&lt;a class="anchor" href="#integration-with-microsoft-api"&gt;&lt;/a&gt;Integration with Microsoft API&lt;/h3&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The identity platform provides Microsoft APIs to interact with many well-known Microsoft SaaS applications. For example, use the graph API to interact with Office 365, Azure DevOps to talk to with Azure DevOps server and Azure Batch to schedule HPC applications in the cloud. To use the graph API
-First configure your &lt;code&gt;application.yml&lt;/code&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="yml"&gt;azure:
-  activedirectory:
-    authorization-clients:
-      graph:
-        scopes:
-            - https://graph.microsoft.com/User.Read
-            - https://graph.microsoft.com/Directory.AccessAsUser.All&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;And then get the &lt;code&gt;OAuth2AuthorizedClient&lt;/code&gt; in your Controller.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect2"&gt;
-&lt;h3 id="incremental-consent"&gt;&lt;a class="anchor" href="#incremental-consent"&gt;&lt;/a&gt;Incremental consent&lt;/h3&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;You can incrementally approve your application access to resources and APIs as needed. This type of behavior is desirable when you want to have finer control of access management, as opposed to granting all scopes upfront. To utilize incremental consent in a web application, configure your &lt;code&gt;application.yml&lt;/code&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="yml"&gt;azure:
-  activedirectory:
-    authorization-clients:
-      arm:
-        on-demand: true
-        scopes: https://management.core.windows.net/user_impersonation&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Incremental consent is triggered when an application tries to get corresponding &lt;code&gt;OAuth2AuthorizedClient&lt;/code&gt;. It can also be triggered by accessing the URL: &lt;code&gt;/login/oauth2/code/{authorization-client}&lt;/code&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect2"&gt;
-&lt;h3 id="integrate-with-aad-for-logout"&gt;&lt;a class="anchor" href="#integrate-with-aad-for-logout"&gt;&lt;/a&gt;Integrate with AAD for logout&lt;/h3&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Add &lt;code&gt;azure.activedirectory.post-logout-redirect-uri&lt;/code&gt; in your configuration properties and your application will automatically log out all active sessions when the user performs a log out, and then redirect the user to the &lt;code&gt;logout-redirect-uri&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;See &lt;a href="https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-samples/azure-spring-boot-sample-active-directory-webapp"&gt;this web application sample project&lt;/a&gt; for more detail. (This sample includes all 3 scenarios)&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="resource-server"&gt;&lt;a class="anchor" href="#resource-server"&gt;&lt;/a&gt;Resource server&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="sect2"&gt;
-&lt;h3 id="aad-protected-resource-server"&gt;&lt;a class="anchor" href="#aad-protected-resource-server"&gt;&lt;/a&gt;AAD protected resource server&lt;/h3&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;In OAuth 2.0, a resource server is an application that protects underlying resources with a token. In this release we’ve added validation for Audience and Issuer to ensure intended audience and issuer are respected.
-See the &lt;a href="https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-samples/azure-spring-boot-sample-active-directory-resource-server"&gt;resource server sample project&lt;/a&gt; for details.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect2"&gt;
-&lt;h3 id="on-behalf-of-flow-with-spring-resource-server"&gt;&lt;a class="anchor" href="#on-behalf-of-flow-with-spring-resource-server"&gt;&lt;/a&gt;On Behalf-of-flow with spring resource server&lt;/h3&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;When your application calls API A with a token, and API A in turn calls API B, a different token is required before API B can be accessed. OAuth 2.0 provides an On-Behalf-Of (OBO) flow that is designed to handle this common scenario. With the Azure Spring Boot Starter for Azure Active Directory, you can delegate a user identity request and propagate through the request chain.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;See &lt;a href="https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-samples/azure-spring-boot-sample-active-directory-resource-server-obo"&gt;the resource server with OBO sample project&lt;/a&gt; for details.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect2"&gt;
-&lt;h3 id="other-notable-changes"&gt;&lt;a class="anchor" href="#other-notable-changes"&gt;&lt;/a&gt;Other notable changes&lt;/h3&gt;
-&lt;div class="sect3"&gt;
-&lt;h4 id="pack-id-change"&gt;&lt;a class="anchor" href="#pack-id-change"&gt;&lt;/a&gt;Pack ID change:&lt;/h4&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;To align with the rest of Azure SDKs, starting from 3.x, the package ID for Azure Spring Boot starters has been renamed from &lt;code&gt;azure-[startername]-spring-boot&lt;/code&gt; to &lt;code&gt;azure-spring-boot-[startername]&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect3"&gt;
-&lt;h4 id="latest-versions"&gt;&lt;a class="anchor" href="#latest-versions"&gt;&lt;/a&gt;Latest versions:&lt;/h4&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Version 3.0.0 is released and includes support for Spring boot 2.2.x and 2.3.x&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Data 2020.0.3 and 2021.0-M2 released</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/01/13/spring-data-2020-0-3-and-2021-0-m2-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Christoph Strobl</name>
-    </author>
-    <id>tag:spring.io,2021-01-13:4333</id>
-    <updated>2021-01-13T15:38:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team, I’m pleased to announce a Spring Data double release 2020.0.3 and 2021.0-M2.&lt;br/&gt;The releases include fixes for projection interfaces, vavr integration, time value precision and 3rd party library upgrades. Make sure to check out out individual change logs.&lt;/p&gt;
-&lt;p&gt;The service release will be picked up by upcoming Spring Boot 2.4.2.&lt;/p&gt;&lt;h2&gt;&lt;a href="#2020-0-3" class="anchor" name="2020-0-3"&gt;&lt;/a&gt;2020.0.3&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Data Commons 2.4.3 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-commons/2.4.3"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/commons/docs/2.4.3/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/commons/docs/2.4.3/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/commons/docs/2.4.3/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data JDBC 2.1.3 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-jdbc/2.1.3"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/jdbc/docs/2.1.3/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/jdbc/docs/2.1.3/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/jdbc/docs/2.1.3/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data JPA 2.4.3 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-jpa/2.4.3"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/jpa/docs/2.4.3/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/jpa/docs/2.4.3/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/jpa/docs/2.4.3/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data MongoDB 3.1.3 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-mongodb/3.1.3"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/mongodb/docs/3.1.3/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/mongodb/docs/3.1.3/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/mongodb/docs/3.1.3/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data for Apache Cassandra 3.1.3 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-cassandra/3.1.3"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/cassandra/docs/3.1.3/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/cassandra/docs/3.1.3/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/cassandra/docs/3.1.3/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data for Apache Geode 2.4.3 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-geode/2.4.3"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/geode/docs/2.4.3/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/geode/docs/2.4.3/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/geode/docs/2.4.3/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data Neo4j 6.0.3 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-neo4j/6.0.3"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/neo4j/docs/6.0.3/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/neo4j/docs/6.0.3/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/neo4j/docs/6.0.3/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data KeyValue 2.4.3 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-keyvalue/2.4.3"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/keyvalue/docs/2.4.3/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/keyvalue/docs/2.4.3/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/keyvalue/docs/2.4.3/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data R2DBC 1.2.3 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-r2dbc/1.2.3"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/r2dbc/docs/1.2.3/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/r2dbc/docs/1.2.3/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/r2dbc/docs/1.2.3/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data LDAP 2.4.3 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-ldap/2.4.3"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/ldap/docs/2.4.3/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/ldap/docs/2.4.3/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/ldap/docs/2.4.3/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data Envers 2.4.3 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-envers/2.4.3"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/envers/docs/2.4.3/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/envers/docs/2.4.3/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/envers/docs/2.4.3/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data REST 3.4.3 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-rest-webmvc/3.4.3"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/rest/docs/3.4.3/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/rest/docs/3.4.3/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/rest/docs/3.4.3/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data Redis 2.4.3 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-redis/2.4.3"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/redis/docs/2.4.3/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/redis/docs/2.4.3/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/redis/docs/2.4.3/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data Elasticsearch 4.1.3 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-elasticsearch/4.1.3"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/elasticsearch/docs/4.1.3/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/elasticsearch/docs/4.1.3/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/elasticsearch/docs/4.1.3/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data Couchbase 4.1.3 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-couchbase/4.1.3"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/couchbase/docs/4.1.3/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/couchbase/docs/4.1.3/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/couchbase/docs/4.1.3/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data for Apache Solr 4.3.3 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-solr/4.3.3"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/solr/docs/4.3.3/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/solr/docs/4.3.3/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/solr/docs/4.3.3/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;h2&gt;&lt;a href="#2021-0-m2" class="anchor" name="2021-0-m2"&gt;&lt;/a&gt;2021.0-M2&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Data Commons 2.5 M2 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-commons/2.5.0-M2"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/commons/docs/2.5.0-M2/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/commons/docs/2.5.0-M2/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/commons/docs/2.5.0-M2/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data JDBC 2.2 M2 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-jdbc/2.2.0-M2"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/jdbc/docs/2.2.0-M2/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/jdbc/docs/2.2.0-M2/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/jdbc/docs/2.2.0-M2/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data JPA 2.5 M2 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-jpa/2.5.0-M2"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/jpa/docs/2.5.0-M2/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/jpa/docs/2.5.0-M2/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/jpa/docs/2.5.0-M2/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data MongoDB 3.2 M2 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-mongodb/3.2.0-M2"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/mongodb/docs/3.2.0-M2/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/mongodb/docs/3.2.0-M2/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/mongodb/docs/3.2.0-M2/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data for Apache Cassandra 3.2 M2 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-cassandra/3.2.0-M2"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/cassandra/docs/3.2.0-M2/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/cassandra/docs/3.2.0-M2/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/cassandra/docs/3.2.0-M2/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data for Apache Geode 2.5 M2 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-geode/2.5.0-M2"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/geode/docs/2.5.0-M2/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/geode/docs/2.5.0-M2/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/geode/docs/2.5.0-M2/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data Neo4j 6.1 M2 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-neo4j/6.1.0-M2"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/neo4j/docs/6.1.0-M2/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/neo4j/docs/6.1.0-M2/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/neo4j/docs/6.1.0-M2/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data KeyValue 2.5 M2 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-keyvalue/2.5.0-M2"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/keyvalue/docs/2.5.0-M2/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/keyvalue/docs/2.5.0-M2/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/keyvalue/docs/2.5.0-M2/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data R2DBC 1.3 M2 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-r2dbc/1.3.0-M2"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/r2dbc/docs/1.3.0-M2/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/r2dbc/docs/1.3.0-M2/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/r2dbc/docs/1.3.0-M2/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data LDAP 2.5 M2 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-ldap/2.5.0-M2"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/ldap/docs/2.5.0-M2/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/ldap/docs/2.5.0-M2/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/ldap/docs/2.5.0-M2/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data Envers 2.5 M2 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-envers/2.5.0-M2"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/envers/docs/2.5.0-M2/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/envers/docs/2.5.0-M2/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/envers/docs/2.5.0-M2/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data REST 3.5 M2 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-rest-webmvc/3.5.0-M2"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/rest/docs/3.5.0-M2/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/rest/docs/3.5.0-M2/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/rest/docs/3.5.0-M2/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data Redis 2.5 M2 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-redis/2.5.0-M2"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/redis/docs/2.5.0-M2/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/redis/docs/2.5.0-M2/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/redis/docs/2.5.0-M2/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data Elasticsearch 4.2 M2 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-elasticsearch/4.2.0-M2"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/elasticsearch/docs/4.2.0-M2/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/elasticsearch/docs/4.2.0-M2/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/elasticsearch/docs/4.2.0-M2/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data Couchbase 4.2 M2 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-couchbase/4.2.0-M2"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/couchbase/docs/4.2.0-M2/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/couchbase/docs/4.2.0-M2/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/couchbase/docs/4.2.0-M2/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

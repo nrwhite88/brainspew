@@ -11,4 +11,6 @@
     <fullyQualifiedTypeName name="com.eventuror.brainspew.entities.ThoughtParent"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
     <fullyQualifiedTypeName name="com.eventuror.brainspew.dto.ThoughtParent"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.function.Function"/>
 </qualifiedTypeNameHistroy>

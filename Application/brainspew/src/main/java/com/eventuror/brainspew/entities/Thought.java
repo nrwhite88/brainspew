@@ -1,37 +1,33 @@
 package com.eventuror.brainspew.entities;
 
-import java.util.List;
-import java.util.Objects;
+import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
-import org.hibernate.annotations.NaturalId;
-import org.hibernate.annotations.NaturalIdCache;
-
 @Entity
-@NaturalIdCache
-@Cache(
-	    usage = CacheConcurrencyStrategy.READ_WRITE
-	)
 public class Thought {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long thoughtId;
-	@NaturalId
 	private String description;
 	
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Thought parent;
+    
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "parent")
+    private Set<Thought> children;
+	
+    public Set<Thought> getChildren() {
+        return children;
+    }
+    
 	public Thought() {
 	}
 	
@@ -62,17 +58,16 @@ public class Thought {
 		this.description = description;
 	}
 
-	@Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Thought thought = (Thought) o;
-        return Objects.equals(description, thought.description);
-    }
- 
-    @Override
-    public int hashCode() {
-        return Objects.hash(description);
-    }
+	public Thought getParent() {
+		return parent;
+	}
+
+	public void setParent(Thought parent) {
+		this.parent = parent;
+	}
+
+	public void setChildren(Set<Thought> children) {
+		this.children = children;
+	}
 
 }

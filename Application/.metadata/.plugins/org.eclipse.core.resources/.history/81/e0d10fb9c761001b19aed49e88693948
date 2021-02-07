@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+		<form action="/thoughts/save-child" th:object="${thoughtParentId}" method="POST">
+		
+		<select th:field="*{parent}">
+			<option th:each = "p : parents"
+					th:value = "${p.parentId}"
+					th:text = "${p.parentId}">
+			</option>
+		</select>
+		
+		<button type="submit">Create Child</button>
+		
+		</form>
+	
+</body>
+
+</html>

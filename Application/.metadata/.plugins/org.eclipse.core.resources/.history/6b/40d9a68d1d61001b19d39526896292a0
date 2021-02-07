@@ -1,0 +1,14 @@
+package com.eventuror.brainspew.dto;
+
+import java.util.Set;
+
+import com.eventuror.brainspew.entities.Thought;
+
+public interface ThoughtParent {
+		
+		public long getThoughtId();
+		public long getParentId();
+		public Thought parent();
+		public Set<Thought> children;
+
+}
