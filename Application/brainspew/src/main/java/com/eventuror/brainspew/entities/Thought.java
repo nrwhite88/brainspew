@@ -2,6 +2,7 @@ package com.eventuror.brainspew.entities;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -11,6 +12,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
+//@JsonNaming(value = PropertyNamingStrategy.SnakeCaseStrategy.class)
+//@JsonInclude(JsonInclude.Include.NON_NULL)
+//@JsonIgnoreProperties({"hibernate_lazy_initializer", "handler"})
 public class Thought {
 	
 	@Id
@@ -21,9 +25,11 @@ public class Thought {
     @ManyToOne(fetch = FetchType.LAZY)
     private Thought parent;
     
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "parent")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "parent", cascade = CascadeType.REMOVE, orphanRemoval = true)
+//    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Set<Thought> children;
 	
+//    @JsonIgnore
     public Set<Thought> getChildren() {
         return children;
     }
@@ -42,7 +48,20 @@ public class Thought {
 		this.description = description;
 	}
 
-    public long getThoughtId() {
+    public Thought(String description, Thought parent) {
+		super();
+		this.description = description;
+		this.parent = parent;
+	}
+	
+    public Thought(String description, Thought parent, Set<Thought> children) {
+		super();
+		this.description = description;
+		this.parent = parent;
+		this.children = children;
+	}
+
+	public long getThoughtId() {
 		return thoughtId;
 	}
 

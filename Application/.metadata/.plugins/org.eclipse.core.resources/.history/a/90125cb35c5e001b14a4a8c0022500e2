@@ -1,7 +1,0 @@
-package com.eventuror.brainspew.relationships;
-
-import java.io.Serializable;
-
-public class thought_parent implements Serializable{
-
-}
