@@ -1,0 +1,11 @@
+Querying children:
+SELECT t.* from thought t
+JOIN thought_parent tp
+ON t.thought_id=tp.thought
+WHERE tp.parent=3;
+
+Querying parents:
+SELECT t.* from thought t
+JOIN thought_parent tp
+ON t.thought_id=tp.parent_id
+WHERE tp.thought_id=3;

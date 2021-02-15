@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.eventuror.brainspew.dto.ThoughtChild&apos; to &apos;ThoughtParent&apos;&#x0A;- Original project: &apos;brainspew&apos;&#x0A;- Original element: &apos;com.eventuror.brainspew.dto.ThoughtChild&apos;&#x0A;- Renamed element: &apos;com.eventuror.brainspew.dto.ThoughtParent&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ThoughtChild&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.eventuror.brainspew.dto{ThoughtChild.java[ThoughtChild" matchStrategy="1" name="ThoughtParent" qualified="false" references="true" similarDeclarations="false" stamp="1605235155430" textual="false" version="1.0"/>
+</session>

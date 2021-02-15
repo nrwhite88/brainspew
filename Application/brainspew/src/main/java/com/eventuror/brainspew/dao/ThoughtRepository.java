@@ -2,6 +2,7 @@ package com.eventuror.brainspew.dao;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import com.eventuror.brainspew.entities.Thought;
@@ -10,5 +11,15 @@ public interface ThoughtRepository extends CrudRepository<Thought, Long> {
 	
 	@Override
 	List<Thought> findAll();
-
+	
+	@Query(nativeQuery=true, value="SELECT * FROM thought WHERE parent_thought_id IS NULL")
+	List<Thought> findByParentIsNull();
+	
+	@Query(nativeQuery=true, value="SELECT * FROM thought "
+			+ "WHERE parent_thought_id = ?1")
+	List<Thought> findChildrenByParentId(String id);
+	
+	@Query(nativeQuery=true, value="SELECT * FROM thought "
+			+ "WHERE thought_id = ?1")
+	List<Thought> findThoughtById(String id);
 }

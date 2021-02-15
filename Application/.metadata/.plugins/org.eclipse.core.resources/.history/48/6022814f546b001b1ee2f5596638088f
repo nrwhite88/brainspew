@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+	<h1>Brain Spew</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>What's the Big Idea?</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="root : ${rootThoughtList}">
+						<td th:text="${root.description}"/>
+				</tbody> 
+			</table>
+
+</body>
+
+</html>

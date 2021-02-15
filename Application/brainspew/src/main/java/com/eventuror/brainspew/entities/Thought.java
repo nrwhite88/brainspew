@@ -1,6 +1,6 @@
 package com.eventuror.brainspew.entities;
 
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -8,12 +8,13 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
+//@JsonNaming(value = PropertyNamingStrategy.SnakeCaseStrategy.class)
+//@JsonInclude(JsonInclude.Include.NON_NULL)
+//@JsonIgnoreProperties({"hibernate_lazy_initializer", "handler"})
 public class Thought {
 	
 	@Id
@@ -21,22 +22,18 @@ public class Thought {
 	private long thoughtId;
 	private String description;
 	
-	@OneToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST},
-			fetch = FetchType.LAZY)
-	@JoinTable(name="thought_child",
-			joinColumns=@JoinColumn(name="thought_id"),
-			inverseJoinColumns=@JoinColumn(name="parent_id")
-			)
-	private List<Thought> children;
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Thought parent;
+    
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "parent", cascade = CascadeType.REMOVE, orphanRemoval = true)
+//    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private Set<Thought> children;
 	
-	@ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST},
-			fetch = FetchType.LAZY)
-	@JoinTable(name="thought_child",
-			joinColumns=@JoinColumn(name="parent_id"),
-			inverseJoinColumns=@JoinColumn(name="thought_id")
-			)
-	private Thought parent;
-	
+//    @JsonIgnore
+    public Set<Thought> getChildren() {
+        return children;
+    }
+    
 	public Thought() {
 	}
 	
@@ -49,6 +46,19 @@ public class Thought {
 		super();
 		this.thoughtId = thoughtId;
 		this.description = description;
+	}
+
+    public Thought(String description, Thought parent) {
+		super();
+		this.description = description;
+		this.parent = parent;
+	}
+	
+    public Thought(String description, Thought parent, Set<Thought> children) {
+		super();
+		this.description = description;
+		this.parent = parent;
+		this.children = children;
 	}
 
 	public long getThoughtId() {
@@ -67,14 +77,16 @@ public class Thought {
 		this.description = description;
 	}
 
-	public List<Thought> getChildren() {
-		return children;
+	public Thought getParent() {
+		return parent;
 	}
 
-	public void setChildren(List<Thought> children) {
+	public void setParent(Thought parent) {
+		this.parent = parent;
+	}
+
+	public void setChildren(Set<Thought> children) {
 		this.children = children;
 	}
-
-
 
 }

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+	<h4>All Thoughts</h4>
+			<table>
+				<thead>
+					<tr>
+						<th th:object="${root}" th:text="${root.description}"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="child : ${children}">
+						<td th:text="${child.description}"/>
+				</tbody> 
+			</table>
+
+</body>
+
+</html>

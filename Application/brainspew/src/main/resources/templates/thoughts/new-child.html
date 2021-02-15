@@ -6,14 +6,14 @@
 
 		<form action="/thoughts/save-child" th:object="${thought}" method="POST">
 		
-		<select th:field="*{children}">
-			<option th:each = "th : ${thoughtList}"
-					th:value = "${th.thoughtId}"
-					th:text = "${th.description}">
+		<select th:field="*{parent}">
+			<option th:each = "t : ${thoughts}"
+					th:value = "${t.thoughtId}"
+					th:text = "${t.description}">
 			</option>
 		</select>
 		
-		<textarea type="text" placeholder="Enter Child Description" th:field="${thought.description}"></textarea>
+		<input type="text" placeholder="Parent Thought" th:field=*{description}>
 		
 		<button type="submit">Create Child</button>
 		
