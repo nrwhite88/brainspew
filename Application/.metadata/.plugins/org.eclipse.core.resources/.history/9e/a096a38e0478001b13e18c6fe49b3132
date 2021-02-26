@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+	<h2 th:each="a : ${ancestors}" th:text="${a.description}"></h2>
+	<div><h3 th:object="${root}" th:text="${root.description}"></h1></div>
+			<table>
+
+				<thead>
+					<tr>
+						<th>What's the Big Idea?</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="child : ${children}">
+					<td>
+					<a th:href="@{/thoughts/list-children/{id}(id=${child.thoughtId})}"
+					th:text="${child.description}"></a>
+				</tbody> 
+			</table>
+
+</body>
+
+</html>

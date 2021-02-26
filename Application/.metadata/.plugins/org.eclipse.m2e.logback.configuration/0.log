@@ -5528,3 +5528,1110 @@
 2021-02-09 23:11:37,375 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2021-02-09 23:11:37,381 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-02-09 23:11:37,381 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-21 18:35:42,332 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2021-02-25 19:26:35,217 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2021-02-25 19:34:16,235 [Worker-18: Launching brainspew - BrainspewApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 19:34:16,246 [Worker-18: Launching brainspew - BrainspewApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 19:34:16,285 [Worker-18: Launching brainspew - BrainspewApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 19:34:16,322 [Worker-18: Launching brainspew - BrainspewApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 19:34:16,322 [Worker-18: Launching brainspew - BrainspewApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 19:36:03,375 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 19:36:03,387 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 19:36:03,397 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 19:36:03,403 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 19:36:03,403 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 19:37:14,376 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 19:37:14,389 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 19:37:14,394 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 19:37:14,399 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 19:37:14,399 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 19:37:47,346 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 19:37:47,350 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 19:37:47,353 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 19:37:47,358 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 19:37:47,358 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 19:39:44,389 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 19:39:44,391 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 19:39:44,394 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 19:39:44,398 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 19:39:44,398 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 19:40:45,591 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 19:40:45,599 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 19:40:45,604 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 19:40:45,609 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 19:40:45,610 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 19:41:31,251 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 19:41:31,258 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 19:41:31,262 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 19:41:31,266 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 19:41:31,266 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 19:50:21,874 [Worker-23: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 19:50:21,881 [Worker-23: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 19:50:21,887 [Worker-23: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 19:50:21,897 [Worker-23: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 19:50:21,897 [Worker-23: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:43:29,667 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:43:29,676 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:43:29,681 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 21:43:29,686 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:43:29,687 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:43:38,659 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:43:38,661 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:43:38,663 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 21:43:38,668 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:43:38,668 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:44:04,476 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:44:04,483 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:44:04,489 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 21:44:04,493 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:44:04,494 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:44:46,467 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:44:46,473 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:44:46,480 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 21:44:46,488 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:44:46,493 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:44:58,553 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:44:58,560 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:44:58,563 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 21:44:58,575 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:44:58,576 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:45:20,567 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:45:20,568 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:45:20,571 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 21:45:20,581 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:45:20,581 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:48:28,626 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:48:28,635 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-25 21:48:28,636 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:48:28,643 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:48:28,646 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:48:39,802 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:48:39,804 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-25 21:48:39,804 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:48:39,814 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:48:39,814 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:48:42,647 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:48:42,648 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-25 21:48:42,649 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:48:42,655 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:48:42,655 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:48:53,504 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:48:53,507 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-25 21:48:53,507 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:48:53,511 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:48:53,512 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:49:56,928 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:49:56,937 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:49:56,944 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 21:49:56,948 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:49:56,949 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:50:20,781 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:50:20,801 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:50:20,807 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 21:50:20,813 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:50:20,813 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:51:13,879 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:51:13,889 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:51:13,897 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 21:51:13,906 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:51:13,906 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:52:13,398 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:52:13,407 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:52:13,412 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 21:52:13,418 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:52:13,419 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:52:15,752 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:52:15,754 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:52:15,756 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 21:52:15,762 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:52:15,765 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:52:51,816 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:52:51,819 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:52:51,825 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 21:52:51,830 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:52:51,830 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:53:00,316 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:53:00,321 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:53:00,323 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 21:53:00,325 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:53:00,325 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:53:23,912 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:53:23,916 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:53:23,923 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 21:53:23,928 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:53:23,928 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:54:21,312 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:54:21,315 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-25 21:54:21,316 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:54:21,322 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:54:21,323 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:58:02,255 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:58:02,263 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:58:02,270 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 21:58:02,275 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:58:02,276 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:58:11,396 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:58:11,400 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:58:11,409 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 21:58:11,413 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:58:11,414 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:59:20,412 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:59:20,428 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:59:20,434 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 21:59:20,440 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:59:20,440 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 21:59:49,139 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:59:49,140 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 21:59:49,143 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 21:59:49,153 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 21:59:49,153 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 22:00:34,632 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:00:34,633 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 22:00:34,639 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 22:00:34,641 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:00:34,644 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 22:03:10,457 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:03:10,472 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 22:03:10,477 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 22:03:10,480 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:03:10,480 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 22:08:27,715 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:08:27,732 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 22:08:27,739 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 22:08:27,744 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:08:27,744 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 22:08:46,923 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:08:46,927 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 22:08:46,932 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 22:08:46,935 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:08:46,936 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 22:09:11,781 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:09:11,789 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 22:09:11,794 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 22:09:11,796 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:09:11,796 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 22:10:13,891 [Worker-53: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:10:13,906 [Worker-53: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 22:10:13,912 [Worker-53: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 22:10:13,915 [Worker-53: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:10:13,915 [Worker-53: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 22:10:43,072 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:10:43,076 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 22:10:43,083 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 22:10:43,088 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:10:43,089 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 22:12:18,216 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:12:18,224 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 22:12:18,231 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 22:12:18,235 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:12:18,235 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 22:12:30,506 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:12:30,509 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 22:12:30,530 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 22:12:30,536 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:12:30,536 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 22:12:40,900 [Worker-58: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:12:40,904 [Worker-58: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 22:12:40,912 [Worker-58: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 22:12:40,914 [Worker-58: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:12:40,914 [Worker-58: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 22:13:04,203 [Worker-55: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:13:04,205 [Worker-55: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-25 22:13:04,206 [Worker-55: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 22:13:04,214 [Worker-55: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:13:04,214 [Worker-55: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-25 22:14:32,698 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:14:32,702 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-25 22:14:32,707 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-25 22:14:32,711 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-25 22:14:32,711 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:22:04,346 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:22:04,351 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 00:22:04,351 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:22:04,357 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:22:04,359 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:25:19,327 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:25:19,334 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:25:19,338 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:25:19,341 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:25:19,342 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:27:10,350 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:27:10,355 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 00:27:10,355 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:27:10,369 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:27:10,370 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:27:25,209 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:27:25,211 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 00:27:25,212 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:27:25,216 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:27:25,216 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:31:41,553 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:31:41,566 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:31:41,571 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:31:41,575 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:31:41,575 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:33:40,574 [Worker-80: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:33:40,579 [Worker-80: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 00:33:40,579 [Worker-80: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:33:40,584 [Worker-80: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:33:40,584 [Worker-80: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:33:43,518 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:33:43,519 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 00:33:43,519 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:33:43,525 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:33:43,526 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:33:56,534 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:33:56,536 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 00:33:56,537 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:33:56,541 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:33:56,541 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:34:08,540 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:34:08,543 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 00:34:08,544 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:34:08,552 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:34:08,552 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:34:38,553 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:34:38,557 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 00:34:38,557 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:34:38,562 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:34:38,563 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:35:13,851 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:35:13,852 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 00:35:13,852 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:35:13,855 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:35:13,856 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:43:25,862 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:43:25,868 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:43:25,873 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:43:25,877 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:43:25,878 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:44:07,815 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:44:07,821 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:44:07,826 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:44:07,829 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:44:07,831 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:44:18,878 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:44:18,886 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:44:18,890 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:44:18,894 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:44:18,895 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:44:56,569 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:44:56,572 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:44:56,576 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:44:56,581 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:44:56,582 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:46:31,413 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:46:31,417 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:46:31,421 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:46:31,423 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:46:31,423 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:46:39,549 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:46:39,551 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:46:39,553 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:46:39,559 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:46:39,559 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:47:25,535 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:47:25,542 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:47:25,548 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:47:25,552 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:47:25,552 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:47:52,351 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:47:52,362 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:47:52,367 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:47:52,372 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:47:52,372 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:48:05,055 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:48:05,061 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:48:05,066 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:48:05,070 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:48:05,070 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:48:13,022 [Worker-88: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:48:13,025 [Worker-88: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:48:13,029 [Worker-88: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:48:13,034 [Worker-88: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:48:13,034 [Worker-88: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:48:40,691 [Worker-86: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:48:40,699 [Worker-86: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:48:40,708 [Worker-86: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:48:40,711 [Worker-86: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:48:40,711 [Worker-86: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:48:59,005 [Worker-86: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:48:59,012 [Worker-86: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:48:59,016 [Worker-86: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:48:59,019 [Worker-86: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:48:59,019 [Worker-86: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:49:52,445 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:49:52,450 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:49:52,455 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:49:52,457 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:49:52,458 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:51:57,569 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:51:57,577 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:51:57,582 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:51:57,584 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:51:57,584 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:52:25,735 [Worker-90: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:52:25,740 [Worker-90: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:52:25,744 [Worker-90: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:52:25,751 [Worker-90: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:52:25,751 [Worker-90: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:52:58,153 [Worker-90: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:52:58,157 [Worker-90: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:52:58,162 [Worker-90: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:52:58,164 [Worker-90: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:52:58,165 [Worker-90: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:53:17,815 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:53:17,818 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:53:17,822 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:53:17,825 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:53:17,825 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:53:31,655 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:53:31,659 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:53:31,664 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:53:31,668 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:53:31,668 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:53:46,853 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:53:46,854 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:53:46,855 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:53:46,858 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:53:46,859 [Worker-84: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:53:54,872 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:53:54,873 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:53:54,875 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:53:54,877 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:53:54,877 [Worker-91: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:54:13,619 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:54:13,622 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:54:13,626 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:54:13,629 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:54:13,629 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:54:36,391 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:54:36,395 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:54:36,399 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:54:36,401 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:54:36,402 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:58:15,202 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:58:15,211 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:58:15,220 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:58:15,225 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:58:15,226 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:58:53,836 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:58:53,844 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:58:53,849 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:58:53,852 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:58:53,852 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:59:19,004 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:59:19,007 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:59:19,011 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:59:19,013 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:59:19,013 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 00:59:42,650 [Worker-98: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:59:42,651 [Worker-98: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 00:59:42,653 [Worker-98: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 00:59:42,656 [Worker-98: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 00:59:42,657 [Worker-98: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:00:27,417 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:00:27,427 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:00:27,432 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:00:27,437 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:00:27,437 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:02:27,135 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:02:27,144 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:02:27,149 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:02:27,152 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:02:27,153 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:03:00,394 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:03:00,396 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:03:00,400 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:03:00,403 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:03:00,403 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:03:12,901 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:03:12,909 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:03:12,914 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:03:12,917 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:03:12,917 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:04:32,742 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:04:32,747 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:04:32,752 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:04:32,758 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:04:32,758 [Worker-99: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:06:24,081 [Worker-103: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:06:24,086 [Worker-103: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:06:24,090 [Worker-103: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:06:24,093 [Worker-103: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:06:24,094 [Worker-103: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:07:04,938 [Worker-103: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:07:04,941 [Worker-103: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:07:04,945 [Worker-103: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:07:04,950 [Worker-103: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:07:04,950 [Worker-103: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:07:11,515 [Worker-105: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:07:11,519 [Worker-105: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:07:11,524 [Worker-105: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:07:11,527 [Worker-105: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:07:11,527 [Worker-105: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:07:34,260 [Worker-103: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:07:34,262 [Worker-103: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:07:34,264 [Worker-103: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:07:34,266 [Worker-103: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:07:34,267 [Worker-103: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:09:02,239 [Worker-105: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:09:02,247 [Worker-105: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:09:02,251 [Worker-105: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:09:02,254 [Worker-105: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:09:02,254 [Worker-105: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:09:29,399 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:09:29,403 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:09:29,406 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:09:29,409 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:09:29,409 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:09:55,193 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:09:55,200 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:09:55,205 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:09:55,208 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:09:55,208 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:09:59,565 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:09:59,567 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:09:59,569 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:09:59,572 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:09:59,572 [Worker-95: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:10:04,325 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:10:04,326 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:10:04,328 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:10:04,332 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:10:04,332 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:10:48,237 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:10:48,238 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:10:48,240 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:10:48,242 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:10:48,242 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:11:06,272 [Worker-105: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:11:06,279 [Worker-105: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:11:06,285 [Worker-105: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:11:06,292 [Worker-105: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:11:06,293 [Worker-105: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:11:15,769 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:11:15,774 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:11:15,778 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:11:15,781 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:11:15,781 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:12:24,712 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:12:24,716 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:12:24,721 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:12:24,723 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:12:24,723 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:13:47,324 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:13:47,325 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:13:47,327 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:13:47,331 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:13:47,331 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:14:43,499 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:14:43,503 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:14:43,507 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:14:43,510 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:14:43,511 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:14:55,205 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:14:55,206 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:14:55,209 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:14:55,211 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:14:55,211 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:15:24,679 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:15:24,683 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:15:24,687 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:15:24,689 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:15:24,689 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:16:19,650 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:16:19,658 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:16:19,664 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:16:19,668 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:16:19,668 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:16:34,736 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:16:34,743 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:16:34,747 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:16:34,749 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:16:34,749 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:16:48,732 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:16:48,733 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:16:48,736 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:16:48,740 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:16:48,740 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:17:09,861 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:17:09,863 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:17:09,869 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:17:09,871 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:17:09,871 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:17:24,338 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:17:24,343 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:17:24,345 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:17:24,349 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:17:24,349 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:17:45,489 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:17:45,490 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:17:45,491 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:17:45,494 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:17:45,494 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:17:55,497 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:17:55,501 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:17:55,503 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:17:55,505 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:17:55,505 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:17:59,629 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:17:59,630 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:17:59,632 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:17:59,635 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:17:59,635 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:18:31,967 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:18:31,968 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:18:31,969 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:18:31,972 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:18:31,972 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:18:38,640 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:18:38,641 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:18:38,642 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:18:38,644 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:18:38,644 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:19:08,045 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:19:08,046 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:19:08,049 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:19:08,052 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:19:08,052 [Worker-108: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:19:15,573 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:19:15,574 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:19:15,575 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:19:15,578 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:19:15,579 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:19:39,331 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:19:39,332 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:19:39,334 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:19:39,337 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:19:39,337 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:20:36,434 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:20:36,439 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:20:36,443 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:20:36,446 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:20:36,446 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:20:48,416 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:20:48,419 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:20:48,424 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:20:48,426 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:20:48,426 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:21:29,667 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:21:29,670 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:21:29,674 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:21:29,676 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:21:29,676 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:22:28,002 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:22:28,006 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:22:28,011 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:22:28,013 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:22:28,013 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:22:32,210 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:22:32,211 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:22:32,212 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:22:32,215 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:22:32,215 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:22:39,052 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:22:39,053 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:22:39,055 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:22:39,058 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:22:39,058 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:23:42,255 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:23:42,264 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:23:42,269 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:23:42,272 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:23:42,272 [Worker-111: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:24:49,589 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:24:49,597 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:24:49,602 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:24:49,604 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:24:49,605 [Worker-107: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:25:28,745 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:25:28,753 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:25:28,758 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:25:28,761 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:25:28,761 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:25:56,572 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:25:56,575 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:25:56,580 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:25:56,584 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:25:56,584 [Worker-101: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:26:28,660 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:26:28,668 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:26:28,674 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:26:28,678 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:26:28,678 [Worker-96: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:27:56,693 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:27:56,700 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:27:56,705 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:27:56,709 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:27:56,710 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:28:22,577 [Worker-112: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:28:22,581 [Worker-112: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:28:22,587 [Worker-112: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:28:22,592 [Worker-112: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:28:22,592 [Worker-112: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:28:52,257 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:28:52,265 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:28:52,270 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:28:52,275 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:28:52,276 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:29:40,431 [Worker-109: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:29:40,435 [Worker-109: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:29:40,440 [Worker-109: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:29:40,442 [Worker-109: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:29:40,442 [Worker-109: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:31:08,022 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:31:08,025 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:31:08,029 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:31:08,033 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:31:08,033 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:31:20,004 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:31:20,008 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:31:20,012 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:31:20,015 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:31:20,015 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:31:56,801 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:31:56,804 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:31:56,812 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:31:56,814 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:31:56,814 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:32:09,318 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:32:09,322 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:32:09,324 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:32:09,326 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:32:09,327 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:32:46,679 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:32:46,683 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:32:46,687 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:32:46,689 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:32:46,690 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:32:54,315 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:32:54,319 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:32:54,321 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:32:54,324 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:32:54,324 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:33:04,258 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:33:04,259 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:33:04,260 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:33:04,262 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:33:04,262 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:34:19,226 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:34:19,234 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:34:19,240 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:34:19,244 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:34:19,246 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:34:23,976 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:34:23,977 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:34:23,981 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:34:23,984 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:34:23,984 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:34:38,122 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:34:38,124 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:34:38,128 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:34:38,130 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:34:38,130 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:35:09,959 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:35:09,963 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:35:09,968 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:35:09,970 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:35:09,970 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:35:19,750 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:35:19,751 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:35:19,753 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:35:19,757 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:35:19,757 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:35:39,166 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:35:39,168 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:35:39,173 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:35:39,175 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:35:39,175 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:36:41,534 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:36:41,543 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:36:41,552 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:36:41,555 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:36:41,555 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:36:52,922 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:36:52,923 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:36:52,925 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:36:52,927 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:36:52,927 [Worker-100: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:37:16,017 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:37:16,021 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:37:16,025 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:37:16,029 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:37:16,029 [Worker-115: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:38:19,338 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:38:19,352 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:38:19,358 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:38:19,363 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:38:19,363 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:38:47,317 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:38:47,319 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:38:47,323 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:38:47,326 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:38:47,326 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:40:24,177 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:40:24,185 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:40:24,194 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:40:24,196 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:40:24,200 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:40:46,427 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:40:46,430 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:40:46,435 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:40:46,438 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:40:46,438 [Worker-118: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:41:00,706 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:41:00,710 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:41:00,716 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:41:00,718 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:41:00,718 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:41:31,654 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:41:31,661 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:41:31,666 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:41:31,669 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:41:31,669 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:41:39,124 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:41:39,127 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:41:39,132 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:41:39,134 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:41:39,135 [Worker-116: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:42:57,875 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:42:57,883 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:42:57,888 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:42:57,891 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:42:57,891 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:43:13,412 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:43:13,413 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:43:13,414 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:43:13,416 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:43:13,416 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:43:18,350 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:43:18,351 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:43:18,354 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:43:18,357 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:43:18,357 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:43:40,650 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:43:40,653 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:43:40,655 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:43:40,657 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:43:40,657 [Worker-114: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:44:32,246 [Worker-123: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:44:32,259 [Worker-123: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:44:32,264 [Worker-123: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:44:32,265 [Worker-123: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:44:32,265 [Worker-123: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:45:37,218 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:45:37,228 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:45:37,235 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:45:37,243 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:45:37,244 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:45:50,675 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:45:50,678 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:45:50,683 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:45:50,687 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:45:50,687 [Worker-120: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:46:15,712 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:46:15,720 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:46:15,725 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:46:15,728 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:46:15,728 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:48:50,858 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:48:50,874 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:48:50,879 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:48:50,882 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:48:50,882 [Worker-121: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:51:14,662 [Worker-124: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:51:14,678 [Worker-124: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:51:14,684 [Worker-124: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:51:14,693 [Worker-124: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:51:14,693 [Worker-124: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:51:47,177 [Worker-124: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:51:47,184 [Worker-124: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:51:47,189 [Worker-124: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:51:47,193 [Worker-124: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:51:47,193 [Worker-124: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:52:45,347 [Worker-127: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:52:45,351 [Worker-127: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:52:45,355 [Worker-127: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:52:45,358 [Worker-127: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:52:45,358 [Worker-127: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:54:42,303 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:54:42,311 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:54:42,316 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:54:42,319 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:54:42,319 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:55:08,862 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:55:08,865 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:55:08,869 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:55:08,870 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:55:08,871 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:56:25,583 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:56:25,616 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:56:25,622 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:56:25,626 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:56:25,626 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:56:58,598 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:56:58,603 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:56:58,606 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:56:58,611 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:56:58,612 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:57:38,789 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:57:38,796 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:57:38,800 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:57:38,802 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:57:38,802 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:57:54,145 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:57:54,149 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:57:54,153 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 01:57:54,156 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:57:54,156 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:58:47,860 [Worker-132: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:58:47,863 [Worker-132: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 01:58:47,864 [Worker-132: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:58:47,874 [Worker-132: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:58:47,874 [Worker-132: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 01:59:56,300 [Worker-132: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:59:56,302 [Worker-132: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 01:59:56,303 [Worker-132: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 01:59:56,306 [Worker-132: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 01:59:56,307 [Worker-132: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:01:01,011 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:01:01,013 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:01:01,013 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:01:01,016 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:01:01,016 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:01:25,050 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:01:25,054 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:01:25,055 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:01:25,059 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:01:25,060 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:01:28,707 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:01:28,707 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:01:28,707 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:01:28,710 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:01:28,711 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:02:05,765 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:02:05,768 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:02:05,768 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:02:05,771 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:02:05,772 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:02:09,254 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:02:09,254 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:02:09,254 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:02:09,259 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:02:09,259 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:02:43,943 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:02:43,945 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:02:43,946 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:02:43,949 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:02:43,949 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:02:48,675 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:02:48,676 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:02:48,676 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:02:48,684 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:02:48,684 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:03:00,696 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:03:00,698 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:03:00,699 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:03:00,705 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:03:00,705 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:03:19,612 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:03:19,615 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:03:19,615 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:03:19,619 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:03:19,619 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:03:25,214 [Worker-136: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:03:25,214 [Worker-136: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:03:25,215 [Worker-136: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:03:25,220 [Worker-136: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:03:25,220 [Worker-136: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:03:33,340 [Worker-136: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:03:33,343 [Worker-136: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:03:33,343 [Worker-136: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:03:33,347 [Worker-136: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:03:33,347 [Worker-136: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:03:43,551 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:03:43,551 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:03:43,552 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:03:43,557 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:03:43,557 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:03:50,619 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:03:50,621 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:03:50,622 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:03:50,626 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:03:50,626 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:03:56,305 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:03:56,314 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:03:56,315 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:03:56,321 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:03:56,321 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:05:37,768 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:05:37,776 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:05:37,780 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 02:05:37,784 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:05:37,784 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:05:56,204 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:05:56,210 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:05:56,215 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 02:05:56,217 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:05:56,220 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:06:18,750 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:06:18,752 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:06:18,756 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 02:06:18,760 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:06:18,760 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:08:15,039 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:08:15,047 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:08:15,052 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 02:08:15,055 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:08:15,055 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:08:33,396 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:08:33,400 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:08:33,404 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 02:08:33,407 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:08:33,407 [Worker-135: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:09:04,638 [Worker-137: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:09:04,649 [Worker-137: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:09:04,655 [Worker-137: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 02:09:04,658 [Worker-137: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:09:04,658 [Worker-137: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:09:26,154 [Worker-137: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:09:26,157 [Worker-137: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:09:26,160 [Worker-137: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 02:09:26,163 [Worker-137: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:09:26,163 [Worker-137: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:10:42,540 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:10:42,543 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:10:42,544 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:10:42,555 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:10:42,555 [Worker-129: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:14:44,240 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:14:44,246 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:14:44,246 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:14:44,252 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:14:44,252 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:14:50,580 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:14:50,583 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:14:50,585 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:14:50,589 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:14:50,590 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:17:06,992 [Worker-140: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:17:07,001 [Worker-140: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:17:07,010 [Worker-140: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 02:17:07,015 [Worker-140: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:17:07,015 [Worker-140: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:17:28,106 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:17:28,110 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:17:28,114 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 02:17:28,116 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:17:28,116 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:18:53,891 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:18:53,895 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:18:53,899 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 02:18:53,902 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:18:53,902 [Worker-130: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:19:09,305 [Worker-138: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:19:09,306 [Worker-138: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:19:09,308 [Worker-138: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 02:19:09,319 [Worker-138: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:19:09,319 [Worker-138: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:19:51,249 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:19:51,253 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:19:51,258 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2021-02-26 02:19:51,259 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:19:51,260 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:20:19,970 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:20:19,973 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:20:19,973 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:20:19,975 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:20:19,976 [Worker-128: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:20:35,114 [Worker-138: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:20:35,116 [Worker-138: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:20:35,116 [Worker-138: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:20:35,119 [Worker-138: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:20:35,119 [Worker-138: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:21:37,524 [Worker-142: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:21:37,527 [Worker-142: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:21:37,527 [Worker-142: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:21:37,533 [Worker-142: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:21:37,533 [Worker-142: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:21:45,246 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:21:45,246 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:21:45,246 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:21:45,250 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:21:45,250 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:22:46,594 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:22:46,596 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:22:46,597 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:22:46,599 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:22:46,599 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:23:11,163 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:23:11,168 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:23:11,168 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:23:11,172 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:23:11,173 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:23:21,064 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:23:21,067 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:23:21,067 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:23:21,071 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:23:21,071 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:23:26,022 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:23:26,023 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:23:26,023 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:23:26,028 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:23:26,029 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:23:36,264 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:23:36,266 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:23:36,267 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:23:36,270 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:23:36,270 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:24:07,170 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:24:07,172 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:24:07,172 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:24:07,174 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:24:07,174 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:24:16,027 [Worker-139: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:24:16,027 [Worker-139: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:24:16,028 [Worker-139: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:24:16,031 [Worker-139: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:24:16,031 [Worker-139: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:24:29,916 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:24:29,918 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:24:29,918 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:24:29,921 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:24:29,922 [Worker-143: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:25:24,597 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:25:24,599 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:25:24,600 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:25:24,603 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:25:24,603 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:25:48,359 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:25:48,361 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:25:48,361 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:25:48,363 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:25:48,363 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:25:58,573 [Worker-139: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:25:58,574 [Worker-139: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:25:58,575 [Worker-139: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:25:58,578 [Worker-139: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:25:58,578 [Worker-139: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:27:53,386 [Worker-144: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:27:53,388 [Worker-144: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:27:53,389 [Worker-144: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:27:53,396 [Worker-144: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:27:53,397 [Worker-144: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:28:49,799 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:28:49,804 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:28:49,805 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:28:49,809 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:28:49,809 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:29:06,759 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:29:06,760 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:29:06,760 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:29:06,762 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:29:06,762 [Worker-141: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources
+2021-02-26 02:30:53,492 [Worker-146: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:30:53,495 [Worker-146: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-02-26 02:30:53,495 [Worker-146: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-02-26 02:30:53,498 [Worker-146: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-26 02:30:53,498 [Worker-146: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/nicholaswhite/Documents/GitHub/brainspew/Application/brainspew/src/test/resources

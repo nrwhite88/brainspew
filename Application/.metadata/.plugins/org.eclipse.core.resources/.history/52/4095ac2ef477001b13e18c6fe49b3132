@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+	<h1 th:object="${root}" th:text="${root.description}"></h1>
+			<table>
+				<thead>
+				</thead>
+				<tbody>
+					<tr th:each="child : ${children}">
+						<td th:text="${child.description}"/>
+				</tbody> 
+			</table>
+
+</body>
+
+</html>

@@ -3,9 +3,10 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <body>
-
-	<h4>All Thoughts</h4>
+	<h2 th:each="a : ${ancestors}" th:text="${a.description}"></h2>
+	<h3 ></h3>
 			<table>
+
 				<thead>
 					<tr>
 						<th th:object="${root}" th:text="${root.description}"></th>
@@ -13,7 +14,9 @@
 				</thead>
 				<tbody>
 					<tr th:each="child : ${children}">
-						<td th:text="${child.description}"/>
+					<td>
+					<a th:href="@{/thoughts/list-children/{id}(id=${child.thoughtId})}"
+					th:text="${child.description}"></a>
 				</tbody> 
 			</table>
 

@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="findById"/>
+		<item key="selection" value="Children"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="children"/>
+			<item value="child"/>
+			<item value="2"/>
+			<item value="id2"/>
+			<item value="parent_"/>
+			<item value="mapped"/>
+			<item value="list-children"/>
+			<item value="dto"/>
+			<item value="parent"/>
+			<item value="thought"/>
+			<item value="thoughtpar"/>
 			<item value="findbyid"/>
 			<item value="getchild"/>
 			<item value="placeh"/>
-			<item value="parent"/>
 			<item value="parents"/>
-			<item value="submit"/>
-			<item value="order"/>
-			<item value="thought"/>
-			<item value="addall"/>
-			<item value="thoughtid"/>
-			<item value="get"/>
-			<item value="getthoughtid"/>
-			<item value="thoughts"/>
-			<item value="children"/>
-			<item value="mapped"/>
 		</list>
 		<list key="replacehistory">
 		</list>
