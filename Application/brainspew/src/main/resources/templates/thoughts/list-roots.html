@@ -2,6 +2,10 @@
 
 <html xmlns:th="http://www.thymeleaf.org">
 
+<head th:replace="layouts :: header"></head>
+
+<nav th:replace="layouts :: navbar"></nav>
+
 <body>
 
 	<h1>Brain Spew</h1>
@@ -15,9 +19,17 @@
 					<tr th:each="root : ${rootThoughtList}">
 					<td>
 					<a th:href="@{/thoughts/list-children/{id}(id=${root.thoughtId})}"
-					th:text="${root.description}"></a>
+					th:text="${root.description}" class="btn btn-primary btn-sm mb-3"></a>
 				</tbody> 
 			</table>
+			
+			<form action="/thoughts/save-thought" th:object="${thought}" method="POST">
+			
+			<input type="text" placeholder="Description" th:field=${thought.description}>
+			
+			<button type="submit">Create New Thought</button>
+			
+			</form>
 
 </body>
 

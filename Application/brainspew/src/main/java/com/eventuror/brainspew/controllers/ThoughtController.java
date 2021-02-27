@@ -72,7 +72,7 @@ public class ThoughtController {
 		
 		thoughtRepo.save(thought);
 		
-		return "redirect:/thoughts/";
+		return "redirect:/thoughts/list-children/" + thought.getParent().getThoughtId();
 		
 	}
 	
@@ -98,8 +98,11 @@ public class ThoughtController {
 	@GetMapping("/")
 	public String displayRoots(Model model) {
 		
+		Thought newThought = new Thought();
+		
 		List<Thought> rootThoughtList = thoughtRepo.findByParentIsNull();
 		
+		model.addAttribute(newThought);
 		model.addAttribute("rootThoughtList", rootThoughtList);
 		
 		return "thoughts/list-roots";
@@ -123,6 +126,7 @@ public class ThoughtController {
 		model.addAttribute("root", root);
 		model.addAttribute("children", children);
 		model.addAttribute("ancestors", ancestors);
+		model.addAttribute("newThought", new Thought());
 		
 		return "thoughts/list-children";
 		

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+	<h4>All Thoughts</h4>
+			<table>
+				<thead>
+					<tr>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="thought : ${thoughtList}">
+						<td th:text="${thought.description}"/>
+				</tbody> 
+			</table>
+			
+			<form action="/thoughts/save-thought" th:object="${thought}" method="POST">
+			
+			<input type="text" placeholder="Description" th:field=${thought.description}>
+			
+			<button type="submit">Create Thought</button>
+			
+			</form>
+
+</body>
+
+</html>
