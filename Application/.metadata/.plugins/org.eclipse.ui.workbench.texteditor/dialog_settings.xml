@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="child"/>
+		<item key="selection" value="security"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="security"/>
+			<item value="root"/>
+			<item value="thought"/>
+			<item value="roots"/>
+			<item value="brainspew"/>
+			<item value="thyme"/>
+			<item value="rootid"/>
+			<item value="parent"/>
+			<item value="save"/>
+			<item value="save-child"/>
+			<item value="save-"/>
 			<item value="child"/>
 			<item value="children"/>
 			<item value="getrootandchildren"/>
-			<item value="parent"/>
 			<item value="getparent"/>
-			<item value="findThoughtById"/>
-			<item value="getAncestorsList"/>
-			<item value="getRootAndChildrenByRootId"/>
-			<item value="getrootandchild"/>
-			<item value="roo"/>
-			<item value="getroot"/>
-			<item value="getrootand"/>
-			<item value="descend"/>
-			<item value="node"/>
-			<item value="is a root"/>
 		</list>
 		<list key="replacehistory">
 		</list>

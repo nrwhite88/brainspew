@@ -8,15 +8,24 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.eventuror.brainspew.dao.ThoughtRepository;
+import com.eventuror.brainspew.dao.UserRepository;
 import com.eventuror.brainspew.entities.Thought;
+import com.eventuror.brainspew.entities.User;
 
 @SpringBootApplication
 public class BrainspewApplication {
 	
 	@Autowired
 	ThoughtRepository thoughtRepo;
+	
+	@Autowired
+	UserRepository userRepo;
+	
+	@Autowired
+	BCryptPasswordEncoder bCryptEncoder;
 
 	public static void main(String[] args) {
 		SpringApplication.run(BrainspewApplication.class, args);
@@ -57,6 +66,14 @@ public class BrainspewApplication {
 			thoughtRepo.save(thought3);
 			thoughtRepo.save(thought4);
 			thoughtRepo.save(thought5);
+			
+			User nick = new User("nickw",
+					bCryptEncoder.encode("nickspw"), "ADMIN");
+			User becky = new User("beckym",
+					bCryptEncoder.encode("beckyspw"), "USER");
+			
+			userRepo.save(nick);
+			userRepo.save(becky);
 			
 		};
 		

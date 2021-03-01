@@ -1,0 +1,21 @@
+package com.eventuror.brainspew.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.eventuror.brainspew.entities.User;
+
+@Controller
+public class SecurityController {
+
+	@GetMapping("/register")
+	public String register(Model model) {
+		
+		User user = new User();
+		model.addAttribute("user", user);
+		return "security/register";
+		
+	}
+	
+}

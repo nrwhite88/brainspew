@@ -1,0 +1,14 @@
+package com.eventuror.brainspew.entities;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Authority {
+	
+	@Id
+	private String
+	
+	@Id
+	private
+
+}
