@@ -2,8 +2,12 @@
 
 <html xmlns:th="http://www.thymeleaf.org">
 
-<body>
+<head th:replace="layouts :: header"></head>
 
+<nav th:replace="layouts :: navbar"></nav>
+
+<body>
+<div class="container">
 	<h4>All Thoughts</h4>
 			<table>
 				<thead>
@@ -16,7 +20,7 @@
 						<td th:text="${thought.description}"/>
 				</tbody> 
 			</table>
-
+</div>
 </body>
 
 </html>

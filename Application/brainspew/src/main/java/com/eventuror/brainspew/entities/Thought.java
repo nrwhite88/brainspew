@@ -21,6 +21,7 @@ public class Thought {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long thoughtId;
 	private String description;
+	private int depth;
 	
     @ManyToOne(fetch = FetchType.LAZY)
     private Thought parent;
@@ -40,6 +41,7 @@ public class Thought {
 	public Thought(String description) {
 		super();
 		this.description = description;
+		this.depth = 0;
 	}
 
 	public Thought(long thoughtId, String description) {
@@ -53,12 +55,20 @@ public class Thought {
 		this.description = description;
 		this.parent = parent;
 	}
-	
+    
     public Thought(String description, Thought parent, Set<Thought> children) {
 		super();
 		this.description = description;
 		this.parent = parent;
 		this.children = children;
+	}
+	
+    public Thought(String description, Thought parent, Set<Thought> children, int depth) {
+		super();
+		this.description = description;
+		this.parent = parent;
+		this.children = children;
+		this.depth = depth;
 	}
 
 	public long getThoughtId() {
@@ -88,5 +98,19 @@ public class Thought {
 	public void setChildren(Set<Thought> children) {
 		this.children = children;
 	}
+
+	public int getDepth() {
+		return depth;
+	}
+
+	public void setDepth() {
+		if (this.parent != null) {
+			this.depth = this.parent.getDepth() + 1;
+		}
+		else {
+			System.out.println(this.getDescription() + " is a root node!");
+		}
+	}
+
 
 }

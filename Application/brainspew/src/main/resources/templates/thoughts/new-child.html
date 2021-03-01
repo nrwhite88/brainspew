@@ -2,6 +2,10 @@
 
 <html xmlns:th="http://www.thymeleaf.org">
 
+<head th:replace="layouts :: header"></head>
+
+<nav th:replace="layouts :: navbar"></nav>
+
 <body>
 
 		<form action="/thoughts/save-child" th:object="${thought}" method="POST">
@@ -13,7 +17,7 @@
 			</option>
 		</select>
 		
-		<input type="text" placeholder="Parent Thought" th:field=*{description}>
+		<input type="text" placeholder="Description" th:field=*{description}>
 		
 		<button type="submit">Create Child</button>
 		

@@ -1,0 +1,15 @@
+package com.eventuror.brainspew.controllers;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class SecurityController {
+
+	@GetMapping("/register")
+	public String register(Model model) {
+		
+		User user = new User();
+		
+	}
+	
+}

@@ -1,0 +1,8 @@
+package com.eventuror.brainspew.entities;
+
+@Entity
+public class User {
+	
+	
+
+}

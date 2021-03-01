@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layouts :: header"></head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+table, td {
+  border: 1px solid black;
+}
+</style>
+
+<body>
+<div class="container">
+	<a th:each="a,iterStat : ${ancestors}" th:href="@{/thoughts/list-children/{id}(id=${a.thoughtId})}"
+	th:text="${a.description} + ' --> '"></a>
+			<table>
+
+				<thead>
+					<tr>
+						<th th:object="${root}" th:text="${root.description}"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="child : ${children}">
+					<td>
+					<a th:href="@{/thoughts/list-children/{id}(id=${child.thoughtId})}"
+					th:text="${child.description}"></a>
+				</tbody> 
+			</table>
+			
+		<form action="/thoughts/save-child" th:object="${newThought}" method="POST">
+			<input type="hidden" th:value = "${root.thoughtId}" th:attr="name='parent'">
+			<input type="text" placeholder="A terrible idea" th:field=*{description}>
+		<button type="submit" th:text="'Add a new thought to &quot;' + ${#strings.abbreviate(root.description,50)} + '&quot;'"></button>
+		
+		</form>
+</div>
+</body>
+
+</html>
