@@ -1,9 +1,16 @@
 package com.eventuror.brainspew.entities;
 
+import java.util.List;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 
 @Entity
 public class User {
@@ -19,6 +26,9 @@ public class User {
 //	@ValidEmail
 //	private String email;
 	private boolean enabled;
+	
+    @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
+	private List<Thought> thoughts;
 
 	public User() {
 		this.role = "USER";
@@ -63,6 +73,14 @@ public class User {
 	}
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
+	}
+
+	public List<Thought> getThoughts() {
+		return thoughts;
+	}
+
+	public void setThoughts(List<Thought> thoughts) {
+		this.thoughts = thoughts;
 	}
 
 

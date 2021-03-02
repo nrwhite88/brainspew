@@ -1,0 +1,8 @@
+package com.eventuror.brainspew.dto;
+
+public class UserDTO {
+	
+	public long userId;
+	public String username;
+
+}

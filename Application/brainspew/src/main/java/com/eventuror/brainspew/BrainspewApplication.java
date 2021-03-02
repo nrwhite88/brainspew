@@ -36,44 +36,44 @@ public class BrainspewApplication {
 		
 		return args -> {
 			
-			Thought thought2 = new Thought("Ferris Bueller Gets a Day Off");
-			Thought thought4 = new Thought("George and Jerry must face off against him, for some reason");
-			
-			Set<Thought> children3 = new HashSet<Thought>();
-			children3.add(thought4);
-			
-			Thought thought3 = new Thought("Turns out Kramer is a cybernetic organism "
-					+ "and doesn't actually know the meaning of friendship", null, children3);
-			Thought thought5 = new Thought("Larry David is George's real father");
-			
-			Set<Thought> children1 = new HashSet<Thought>();
-			children1.add(thought3);
-			children1.add(thought4);
-			Thought thought1 = new Thought("Alternate Seinfeld endings", null, children1);
-			
-			thought3.setParent(thought1);
-			thought4.setParent(thought3);
-			thought5.setParent(thought1);
-			
-			thought1.setDepth();
-			thought2.setDepth();
-			thought3.setDepth();
-			thought4.setDepth();
-			thought5.setDepth();
-
-			thoughtRepo.save(thought1);
-			thoughtRepo.save(thought2);
-			thoughtRepo.save(thought3);
-			thoughtRepo.save(thought4);
-			thoughtRepo.save(thought5);
-			
 			User nick = new User("nickw",
-					bCryptEncoder.encode("nickspw"), "ADMIN");
+					bCryptEncoder.encode("nickspw"), "USER");
 			User becky = new User("beckym",
 					bCryptEncoder.encode("beckyspw"), "USER");
 			
 			userRepo.save(nick);
 			userRepo.save(becky);
+//			
+//			Thought thought2 = new Thought("Ferris Bueller Gets a Day Off", nick);
+//			Thought thought4 = new Thought("George and Jerry must face off against him, for some reason", nick);
+//			
+//			Set<Thought> children3 = new HashSet<Thought>();
+//			children3.add(thought4);
+//			
+//			Thought thought3 = new Thought("Turns out Kramer is a cybernetic organism "
+//					+ "and doesn't actually know the meaning of friendship", null, children3, nick);
+//			Thought thought5 = new Thought("Larry David is George's real father", nick);
+//			
+//			Set<Thought> children1 = new HashSet<Thought>();
+//			children1.add(thought3);
+//			children1.add(thought4);
+//			Thought thought1 = new Thought("Alternate Seinfeld endings", null, children1, nick);
+//			
+//			thought3.setParent(thought1);
+//			thought4.setParent(thought3);
+//			thought5.setParent(thought1);
+//			
+//			thought1.setDepth();
+//			thought2.setDepth();
+//			thought3.setDepth();
+//			thought4.setDepth();
+//			thought5.setDepth();
+//
+//			thoughtRepo.save(thought1);
+//			thoughtRepo.save(thought2);
+//			thoughtRepo.save(thought3);
+//			thoughtRepo.save(thought4);
+//			thoughtRepo.save(thought5);
 			
 		};
 		

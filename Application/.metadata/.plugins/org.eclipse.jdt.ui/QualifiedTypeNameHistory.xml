@@ -12,5 +12,9 @@
     <fullyQualifiedTypeName name="com.eventuror.brainspew.dto.ThoughtParent"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="java.util.function.Function"/>
+    <fullyQualifiedTypeName name="javax.sql.DataSource"/>
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="com.eventuror.brainspew.dao.UserRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.WebMvcConfigurer"/>
+    <fullyQualifiedTypeName name="com.eventuror.brainspew.entities.User"/>
 </qualifiedTypeNameHistroy>
