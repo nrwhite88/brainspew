@@ -1,0 +1,23 @@
+INSERT INTO User(username, password, role, enabled)
+	VALUES('Dr. Chim Richalds', 'pw', 0, 1);
+
+INSERT INTO Thought(description, depth, user_id)
+    VALUES('Alternate Seinfeld Endings', 0, 1);
+    
+INSERT INTO Thought(description, depth, user_id, parent_thought_id)
+	VALUES('Ferris Bueller Gets a Day Off', 0, 1);
+
+INSERT INTO Thought(description, depth, user_id, parent_thought_id)
+	VALUES('After 6 months unemployed, Ferris finally lands job interview', 1, 2);
+	
+INSERT INTO Thought(description, depth, user_id)
+	VALUES('Ferris goes to jail for tax evasion', 1);
+	
+INSERT INTO Thought(description, depth, user_id, parent_thought_id)
+	VALUES('Ferris goes to jail for tax evasion', 2, );
+	
+INSERT INTO Thought(description, depth, user_id, parent_thought_id)
+	VALUES('His car breaks down on the way to the interview', 2, 3);
+	
+INSERT INTO Thought(description, depth, user_id, parent_thought_id)
+	VALUES('Someone else gets the job', 3, 4);

@@ -1,0 +1,5 @@
+INSERT INTO User(username, password, role, enabled)
+	VALUES('Dr. Chim Richalds', 'pw', 0, 1);
+
+INSERT INTO Thought(description, depth, user_id)
+    VALUES('Alternate Seinfeld Endings', 0, 1);

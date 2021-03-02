@@ -14,7 +14,7 @@
 
 				<thead class="thread-dark">
 					<tr>
-						<th th:object="${root}" th:text="${root.description}"></th>
+						<th th:object="${root}" th:text="${root.description} + ' (thought up by ' + ${author} + ')'"></th>
 					</tr>
 				</thead>
 				<tbody>

@@ -1,0 +1,14 @@
+INSERT INTO User(username, password, role, enabled)
+	VALUES('Dr. Chim Richalds', 'pw', 0, 1);
+
+INSERT INTO Thought(description, depth, user_id)
+    VALUES('Alternate Seinfeld Endings', 0, 1);
+    
+INSERT INTO Thought(description, depth, user_id)
+	VALUES('Ferris Bueller Gets a Day Off', 0, 1);
+
+INSERT INTO Thought(description, depth, user_id)
+	VALUES('Ferris has a job interview', 1, 2);
+	
+INSERT INTO Thought(description, depth, user_id)
+	VALUES('Ferris has a job interview', 2, 3);

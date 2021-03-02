@@ -1,0 +1,2 @@
+INSERT INTO Thought(description, user_id)
+    VALUES('Alternate Seinfeld Endings', 1);

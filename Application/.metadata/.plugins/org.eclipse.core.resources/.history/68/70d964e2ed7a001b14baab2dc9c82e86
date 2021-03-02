@@ -1,0 +1,2 @@
+insert into Thought(description, depth, user)
+    VALUES('Alternate Seinfeld Endings', 0);

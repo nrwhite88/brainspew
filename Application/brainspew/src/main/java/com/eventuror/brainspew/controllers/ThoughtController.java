@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +14,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.eventuror.brainspew.dao.ThoughtRepository;
+import com.eventuror.brainspew.dao.UserRepository;
 import com.eventuror.brainspew.entities.Thought;
+import com.eventuror.brainspew.entities.User;
 
 @Controller
 @RequestMapping("/thoughts")
@@ -20,6 +24,9 @@ public class ThoughtController {
 	
 	@Autowired
 	ThoughtRepository thoughtRepo;
+	
+	@Autowired
+	UserRepository userRepo;
 	
 	@GetMapping("/list")
 	public String displayThought(Model model) {
@@ -45,6 +52,11 @@ public class ThoughtController {
 	@PostMapping("/save-thought")
 	public String createThought(Thought thought, Model model) {
 		
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		User u = userRepo.findUserIdByUsername(auth.getName()).get(0);
+		
+		thought.setUser(u);
+		
 		thoughtRepo.save(thought);
 		
 		return "redirect:/thoughts/";
@@ -68,6 +80,11 @@ public class ThoughtController {
 	@PostMapping("/save-child")
 	public String createChild(Thought thought, Model model) {
 		
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		User u = userRepo.findUserIdByUsername(auth.getName()).get(0);
+		
+		thought.setUser(u);
+	
 		thought.setDepth();
 		
 		thoughtRepo.save(thought);
@@ -123,10 +140,15 @@ public class ThoughtController {
 			ancestors.add(ancestorsList.get(i));
 		}
 		
+		String author = userRepo.findUsernameByUserId(
+				root.getUser().getUserId()).get(0)
+				.getUsername();
+		
 		model.addAttribute("root", root);
 		model.addAttribute("children", children);
 		model.addAttribute("ancestors", ancestors);
 		model.addAttribute("newThought", new Thought());
+		model.addAttribute("author", author);
 		
 		return "thoughts/list-children";
 		

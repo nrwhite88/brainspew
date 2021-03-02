@@ -1,5 +1,0 @@
-package com.eventuror.brainspew.security;
-
-public class SecurityConfiguration {
-
-}
